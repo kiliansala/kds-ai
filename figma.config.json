@@ -1,0 +1,8 @@
+{
+  "codeConnect": {
+    "include": ["figma/**/*.connect.ts"]
+  },
+  "label": "Web Components",
+  "repository": "https://github.com/kiliansala/kds-ai",
+  "documentUrl": "https://github.com/kiliansala/kds-ai/blob/main/"
+}
