@@ -5,6 +5,10 @@
 
 **KDS-AI** is a proof-of-concept Design System architecture optimized for **AI Agent consumption**. It establishes a strict, vendor-neutral contract between Design (Figma) and Code (Web Components), enabling automated synchronization via MCP agents.
 
+## 🚀 Live Demo
+
+[Explore the interactive Storybook](https://kiliansala.github.io/kds-ai/)
+
 ## 🤖 AI Agent Onboarding (Start Here)
 
 If you are an AI Agent tasked with working on this repo, follow these instructions strictly:
