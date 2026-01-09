@@ -1,38 +1,36 @@
 import figma from '@figma/code-connect';
-import { KdsButton } from '../src/components/kds-button';
 
-// Button Connection
+const html = (strings: TemplateStringsArray, ...values: any[]) => String.raw({ raw: strings }, ...values);
+
 figma.connect(
-  'https://www.figma.com/design/example/Button',
+  'https://www.figma.com/design/hp3Ddy3vnBYGQgmR2HKyI4/components.material?node-id=53923-27460&m=dev',
   {
     props: {
-        variant: figma.enum('Type', { 
-            'Primary': 'primary', 
-            'Secondary': 'secondary',
-            'Tertiary': 'tertiary',
-            'Danger': 'danger'
-        }),
-        size: figma.enum('Size', { 
-            'Small': 'sm', 
-            'Medium': 'md', 
-            'Large': 'lg' 
-        }),
-        disabled: figma.boolean('Disabled'),
-        label: figma.string('Label'),
-        icon: figma.boolean('Has Icon'), // Simplified for now
-        loading: figma.boolean('Loading')
+      appearance: figma.enum('Appearance', {
+        'Filled': 'filled',
+        'Outlined': 'outlined',
+        'Text': 'text',
+        'Tonal': 'tonal',
+        'Elevated': 'elevated', 
+      }),
+      // Map state directly to attribute string or empty if default
+      state: figma.enum('State', {
+        'Enabled': '', 
+        'Disabled': ' state="disabled"',
+        'Hovered': ' state="hovered"',
+        'Focused': ' state="focused"',
+        'Pressed': ' state="pressed"'
+      }),
+      // Has Icon boolean maps to attribute presence
+      hasIcon: figma.boolean('Show Icon', {
+        true: ' has-icon',
+        false: ''
+      }),
+      label: figma.string('Label text'),
+      // Just pass the icon name always. The component determines visibility based on has-icon.
+      icon: figma.instance('Icon'), 
     },
-    example: (props) => {
-        const attrString = Object.entries(props)
-        .map(([key, val]) => {
-            if (key === 'icon') return ''; // Skip icon logic for briefness, or handle specifically
-            if (val === true) return ` ${key}`;
-            if (val === false || val === undefined) return '';
-            return ` ${key}="${val}"`;
-        })
-        .join('');
-        
-    return `<kds-button${attrString}>${props.label}</kds-button>`;
-    }
+    example: ({ appearance, state, hasIcon, label, icon }) => 
+      html`<kds-button appearance="${appearance}"${state}${hasIcon} icon="${icon}">${label}</kds-button>`
   }
 );

@@ -5,17 +5,25 @@
       "tag": "kds-button",
       "name": "Button",
       "description": "Trigger an action or navigation. NOT used for toggle states.",
-      "tokens": [],
+      "tokens": [
+        "--kds-comp-primary",
+        "--kds-comp-on-primary",
+        "--kds-comp-secondary-container",
+        "--kds-comp-on-secondary-container",
+        "--kds-comp-surface-container-low",
+        "--kds-comp-on-surface-variant",
+        "--kds-comp-outline",
+        "--kds-comp-on-surface",
+        "--kds-comp-primary-opacity-08",
+        "--kds-comp-primary-opacity-12",
+        "--kds-comp-primary-opacity-16"
+      ],
       "properties": [
-        { "name": "label", "type": "string", "default": "", "description": "Text content." },
-        { "name": "variant", "type": "enum", "default": "primary", "allowedValues": ["primary", "secondary", "tertiary", "danger"], "description": "Visual style." },
-        { "name": "size", "type": "enum", "default": "md", "allowedValues": ["sm", "md", "lg"], "description": "Size." },
-        { "name": "icon", "type": "string", "description": "Optional icon name." },
-        { "name": "iconPosition", "type": "enum", "default": "start", "allowedValues": ["start", "end"], "description": "Icon position." },
-        { "name": "type", "type": "enum", "default": "button", "allowedValues": ["button", "submit", "reset"], "description": "Form behavior." },
-        { "name": "disabled", "type": "boolean", "default": false },
-        { "name": "loading", "type": "boolean", "default": false },
-        { "name": "href", "type": "string", "description": "If present, behaves as a link." }
+        { "name": "appearance", "displayName": "Appearance", "type": "enum", "default": "filled", "allowedValues": ["filled", "outlined", "text", "elevated", "tonal"], "description": "Visual style matching Figma." },
+        { "name": "state", "displayName": "State", "type": "enum", "default": "enabled", "allowedValues": ["enabled", "disabled", "hovered", "focused", "pressed"], "description": "Interaction state." },
+        { "name": "hasIcon", "displayName": "Show Icon", "type": "boolean", "default": false, "description": "Toggles icon visibility." },
+        { "name": "label", "displayName": "Label text", "type": "string", "default": "Label", "description": "Text content." },
+        { "name": "icon", "displayName": "Icon name", "type": "string", "default": "add", "description": "Icon instance name." }
       ],
       "events": [
         { "name": "kds-click", "description": "Standard click (preventable)." }

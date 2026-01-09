@@ -1,0 +1,263 @@
+import { Meta, Title, Subtitle, Description, Primary, Controls } from '@storybook/blocks';
+import * as ButtonStories from './kds-button.stories';
+
+<Meta of={ButtonStories} />
+
+<Title />
+<Subtitle />
+<Description />
+
+## Interactive Playground
+
+<Primary />
+<Controls />
+
+## Design Tokens
+
+This component uses these tokens for its visual definition. See the [full specification in the Playground](?path=/docs/tokens-overview--docs).
+
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '1rem', marginBottom: '2rem', fontSize: '14px' }}>
+    <thead>
+        <tr style={{ borderBottom: '1px solid #eee', textAlign: 'left', color: '#999', textTransform: 'uppercase', fontSize: '11px' }}>
+            <th style={{ padding: '12px 0' }}>Token Name</th>
+            <th style={{ padding: '12px 0' }}>Light</th>
+            <th style={{ padding: '12px 0' }}>Dark</th>
+            <th style={{ padding: '12px 0' }}>CSS Variable</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ fontWeight: '600', color: '#1a1a1b' }}>Primary</div>
+                <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}></div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#1484FF', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#1484FF</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#5AA9FF', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#5AA9FF</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <code style={{ fontSize: '12px', color: '#666', background: '#f0f0f0', padding: '2px 6px', borderRadius: '4px' }}>--kds-comp-primary</code>
+            </td>
+        </tr>
+        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ fontWeight: '600', color: '#1a1a1b' }}>On Primary</div>
+                <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}></div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#FFFFFF', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#FFFFFF</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#FFFFFF', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#FFFFFF</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <code style={{ fontSize: '12px', color: '#666', background: '#f0f0f0', padding: '2px 6px', borderRadius: '4px' }}>--kds-comp-on-primary</code>
+            </td>
+        </tr>
+        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ fontWeight: '600', color: '#1a1a1b' }}>Secondary Container</div>
+                <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}></div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#ADACEB', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#ADACEB</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#1B1A6A', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#1B1A6A</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <code style={{ fontSize: '12px', color: '#666', background: '#f0f0f0', padding: '2px 6px', borderRadius: '4px' }}>--kds-comp-secondary-container</code>
+            </td>
+        </tr>
+        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ fontWeight: '600', color: '#1a1a1b' }}>On Secondary Container</div>
+                <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}></div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#111044', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#111044</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#BEBDEF', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#BEBDEF</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <code style={{ fontSize: '12px', color: '#666', background: '#f0f0f0', padding: '2px 6px', borderRadius: '4px' }}>--kds-comp-on-secondary-container</code>
+            </td>
+        </tr>
+        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ fontWeight: '600', color: '#1a1a1b' }}>Surface Container Low</div>
+                <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}></div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#F2F2F2', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#F2F2F2</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#171718', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#171718</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <code style={{ fontSize: '12px', color: '#666', background: '#f0f0f0', padding: '2px 6px', borderRadius: '4px' }}>--kds-comp-surface-container-low</code>
+            </td>
+        </tr>
+        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ fontWeight: '600', color: '#1a1a1b' }}>On Surface Variant</div>
+                <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}></div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#414144', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#414144</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#C1C1C4', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#C1C1C4</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <code style={{ fontSize: '12px', color: '#666', background: '#f0f0f0', padding: '2px 6px', borderRadius: '4px' }}>--kds-comp-on-surface-variant</code>
+            </td>
+        </tr>
+        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ fontWeight: '600', color: '#1a1a1b' }}>Outline</div>
+                <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}></div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#717176', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#717176</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#8B8B90', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#8B8B90</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <code style={{ fontSize: '12px', color: '#666', background: '#f0f0f0', padding: '2px 6px', borderRadius: '4px' }}>--kds-comp-outline</code>
+            </td>
+        </tr>
+        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ fontWeight: '600', color: '#1a1a1b' }}>On Surface</div>
+                <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}></div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#171718', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#171718</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: '#E0E0E1', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>#E0E0E1</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <code style={{ fontSize: '12px', color: '#666', background: '#f0f0f0', padding: '2px 6px', borderRadius: '4px' }}>--kds-comp-on-surface</code>
+            </td>
+        </tr>
+        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ fontWeight: '600', color: '#1a1a1b' }}>Opacity-08</div>
+                <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}>Primary</div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: 'rgba(0, 114, 240, 0.08)', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>rgba(0, 114, 240, 0.08)</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: 'rgba(173, 198, 255, 0.08)', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>rgba(173, 198, 255, 0.08)</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <code style={{ fontSize: '12px', color: '#666', background: '#f0f0f0', padding: '2px 6px', borderRadius: '4px' }}>--kds-comp-primary-opacity-08</code>
+            </td>
+        </tr>
+        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ fontWeight: '600', color: '#1a1a1b' }}>Opacity-12</div>
+                <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}>Primary</div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: 'rgba(0, 114, 240, 0.12)', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>rgba(0, 114, 240, 0.12)</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: 'rgba(173, 198, 255, 0.12)', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>rgba(173, 198, 255, 0.12)</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <code style={{ fontSize: '12px', color: '#666', background: '#f0f0f0', padding: '2px 6px', borderRadius: '4px' }}>--kds-comp-primary-opacity-12</code>
+            </td>
+        </tr>
+        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ fontWeight: '600', color: '#1a1a1b' }}>Opacity-16</div>
+                <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}>Primary</div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: 'rgba(0, 114, 240, 0.16)', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>rgba(0, 114, 240, 0.16)</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ width: '14px', height: '14px', background: 'rgba(173, 198, 255, 0.16)', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>rgba(173, 198, 255, 0.16)</code>
+                </div>
+            </td>
+            <td style={{ padding: '16px 0' }}>
+                <code style={{ fontSize: '12px', color: '#666', background: '#f0f0f0', padding: '2px 6px', borderRadius: '4px' }}>--kds-comp-primary-opacity-16</code>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
