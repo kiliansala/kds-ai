@@ -1,0 +1,225 @@
+{
+  "version": "0.1.0",
+  "components": [
+    {
+      "tag": "kds-button",
+      "name": "Button",
+      "description": "Trigger an action or navigation. NOT used for toggle states.",
+      "tokens": [],
+      "properties": [
+        { "name": "label", "type": "string", "default": "", "description": "Text content." },
+        { "name": "variant", "type": "enum", "default": "primary", "allowedValues": ["primary", "secondary", "tertiary", "danger"], "description": "Visual style." },
+        { "name": "size", "type": "enum", "default": "md", "allowedValues": ["sm", "md", "lg"], "description": "Size." },
+        { "name": "icon", "type": "string", "description": "Optional icon name." },
+        { "name": "iconPosition", "type": "enum", "default": "start", "allowedValues": ["start", "end"], "description": "Icon position." },
+        { "name": "type", "type": "enum", "default": "button", "allowedValues": ["button", "submit", "reset"], "description": "Form behavior." },
+        { "name": "disabled", "type": "boolean", "default": false },
+        { "name": "loading", "type": "boolean", "default": false },
+        { "name": "href", "type": "string", "description": "If present, behaves as a link." }
+      ],
+      "events": [
+        { "name": "kds-click", "description": "Standard click (preventable)." }
+      ],
+      "slots": [
+        { "name": "default", "description": "Content (replaces label property if used)." },
+        { "name": "icon", "description": "Custom icon definition." }
+      ],
+      "states": []
+    },
+    {
+      "tag": "kds-text-field",
+      "name": "TextField",
+      "description": "Single-line text input.",
+      "tokens": [],
+      "properties": [
+        { "name": "value", "type": "string", "default": "" },
+        { "name": "label", "type": "string", "default": "", "description": "Visible label." },
+        { "name": "placeholder", "type": "string", "default": "" },
+        { "name": "helperText", "type": "string", "default": "" },
+        { "name": "errorText", "type": "string", "default": "", "description": "If present, triggers invalid state." },
+        { "name": "disabled", "type": "boolean", "default": false },
+        { "name": "readonly", "type": "boolean", "default": false },
+        { "name": "type", "type": "enum", "default": "text", "allowedValues": ["text", "password", "email", "number", "tel", "url"] },
+        { "name": "required", "type": "boolean", "default": false }
+      ],
+      "events": [
+        { "name": "kds-input", "description": "Value changed.", "payloadType": "{ value: string }" },
+        { "name": "kds-change", "description": "Value committed.", "payloadType": "{ value: string }" },
+        { "name": "kds-focus", "description": "Focused." },
+        { "name": "kds-blur", "description": "Blurred." }
+      ],
+      "slots": [
+        { "name": "start-adornment", "description": "Icon/content before text." },
+        { "name": "end-adornment", "description": "Icon/content after text." }
+      ],
+      "states": []
+    },
+    {
+      "tag": "kds-checkbox",
+      "name": "Checkbox",
+      "description": "Binary selection input.",
+      "tokens": [],
+      "properties": [
+        { "name": "checked", "type": "boolean", "default": false },
+        { "name": "indeterminate", "type": "boolean", "default": false, "description": "Mixed state." },
+        { "name": "label", "type": "string", "default": "" },
+        { "name": "disabled", "type": "boolean", "default": false },
+        { "name": "required", "type": "boolean", "default": false },
+        { "name": "value", "type": "string", "default": "on", "description": "Form value." }
+      ],
+      "events": [
+        { "name": "kds-change", "description": "State changed.", "payloadType": "{ checked: boolean }" }
+      ],
+      "slots": [],
+      "states": []
+    },
+    {
+      "tag": "kds-radio",
+      "name": "Radio",
+      "description": "Single selection from a set.",
+      "tokens": [],
+      "properties": [
+        { "name": "checked", "type": "boolean", "default": false },
+        { "name": "value", "type": "string", "required": true, "description": "Unique value in group." },
+        { "name": "label", "type": "string", "default": "" },
+        { "name": "disabled", "type": "boolean", "default": false },
+        { "name": "name", "type": "string", "description": "Group name." }
+      ],
+      "events": [
+        { "name": "kds-change", "description": "Selected.", "payloadType": "{ checked: boolean, value: string }" }
+      ],
+      "slots": [],
+      "states": []
+    },
+    {
+      "tag": "kds-switch",
+      "name": "Switch",
+      "description": "Immediate toggle setting.",
+      "tokens": [],
+      "properties": [
+        { "name": "checked", "type": "boolean", "default": false },
+        { "name": "label", "type": "string", "default": "" },
+        { "name": "disabled", "type": "boolean", "default": false },
+        { "name": "size", "type": "enum", "default": "md", "allowedValues": ["sm", "md"] }
+      ],
+      "events": [
+        { "name": "kds-change", "description": "Toggled.", "payloadType": "{ checked: boolean }" }
+      ],
+      "slots": [],
+      "states": []
+    },
+    {
+      "tag": "kds-select",
+      "name": "Select",
+      "description": "Selection from a predefined list.",
+      "tokens": [],
+      "properties": [
+        { "name": "value", "type": "string", "default": "" },
+        { "name": "label", "type": "string", "default": "" },
+        { "name": "placeholder", "type": "string", "default": "" },
+        { "name": "options", "type": "array", "default": null, "description": "List of { label, value } objects." },
+        { "name": "disabled", "type": "boolean", "default": false },
+        { "name": "multiple", "type": "boolean", "default": false }
+      ],
+      "events": [
+        { "name": "kds-change", "description": "Selection changed.", "payloadType": "{ value: string | string[] }" }
+      ],
+      "slots": [
+        { "name": "default", "description": "Expects kds-option elements." }
+      ],
+      "states": []
+    },
+    {
+      "tag": "kds-textarea",
+      "name": "TextArea",
+      "description": "Multi-line text input.",
+      "tokens": [],
+      "properties": [
+        { "name": "value", "type": "string", "default": "" },
+        { "name": "label", "type": "string", "default": "" },
+        { "name": "placeholder", "type": "string", "default": "" },
+        { "name": "rows", "type": "number", "default": 3 },
+        { "name": "maxRows", "type": "number", "description": "Autosize limit." },
+        { "name": "resize", "type": "enum", "default": "vertical", "allowedValues": ["none", "vertical", "auto"] },
+        { "name": "disabled", "type": "boolean" },
+        { "name": "readonly", "type": "boolean" },
+        { "name": "errorText", "type": "string" }
+      ],
+      "events": [
+        { "name": "kds-input", "description": "Value changed." },
+        { "name": "kds-change", "description": "Committed." }
+      ],
+      "slots": [],
+      "states": []
+    },
+    {
+      "tag": "kds-badge",
+      "name": "Badge",
+      "description": "Status indicator or count.",
+      "tokens": [],
+      "properties": [
+        { "name": "content", "type": "string", "description": "Text/Number to display." },
+        { "name": "variant", "type": "enum", "default": "primary", "allowedValues": ["primary", "secondary", "success", "warning", "danger", "neutral"] },
+        { "name": "size", "type": "enum", "default": "md", "allowedValues": ["sm", "md"] },
+        { "name": "dot", "type": "boolean", "default": false, "description": "If true, ignores content and shows a dot." }
+      ],
+      "events": [],
+      "slots": [
+        { "name": "default", "description": "Wraps this content (badge overlay)." }
+      ],
+      "states": []
+    },
+    {
+      "tag": "kds-icon",
+      "name": "Icon",
+      "description": "Visual symbol.",
+      "tokens": [],
+      "properties": [
+        { "name": "name", "type": "string", "required": true, "description": "Token name of the icon." },
+        { "name": "size", "type": "enum", "default": "md", "allowedValues": ["sm", "md", "lg", "xl"] },
+        { "name": "color", "type": "string", "description": "Token color reference (optional override)." },
+        { "name": "label", "type": "string", "description": "ARIA label." }
+      ],
+      "events": [],
+      "slots": [],
+      "states": []
+    },
+    {
+      "tag": "kds-tooltip",
+      "name": "Tooltip",
+      "description": "Contextual help info on hover/focus.",
+      "tokens": [],
+      "properties": [
+        { "name": "content", "type": "string", "default": "" },
+        { "name": "position", "type": "enum", "default": "top", "allowedValues": ["top", "right", "bottom", "left"] },
+        { "name": "disabled", "type": "boolean" }
+      ],
+      "events": [],
+      "slots": [
+        { "name": "default", "description": "The trigger element." }
+      ],
+      "states": []
+    },
+    {
+      "tag": "kds-dialog",
+      "name": "Dialog",
+      "description": "Modal window.",
+      "tokens": [],
+      "properties": [
+        { "name": "open", "type": "boolean", "default": false },
+        { "name": "title", "type": "string" },
+        { "name": "size", "type": "enum", "default": "md", "allowedValues": ["sm", "md", "lg", "fullscreen"] },
+        { "name": "dismissible", "type": "boolean", "default": true, "description": "Close on click outside/escape." }
+      ],
+      "events": [
+        { "name": "kds-close", "description": "Request to close." }
+      ],
+      "slots": [
+        { "name": "default", "description": "Body content." },
+        { "name": "header-actions", "description": "Top right actions." },
+        { "name": "footer", "description": "Action buttons." }
+      ],
+      "states": []
+    }
+  ]
+}

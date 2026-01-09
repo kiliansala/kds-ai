@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KDS Component Contract",
+  "description": "Schema for validating KDS component definitions",
+  "type": "object",
+  "required": ["version", "components"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Contract version (e.g., '0.1.0')"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Component"
+      }
+    }
+  },
+  "definitions": {
+    "Component": {
+      "type": "object",
+      "required": [
+        "tag",
+        "name",
+        "description",
+        "properties",
+        "events",
+        "slots"
+      ],
+      "properties": {
+        "tag": {
+          "type": "string",
+          "pattern": "^kds-[a-z0-9-]+$",
+          "description": "Web Component tag name (must start with kds-)"
+        },
+        "name": {
+          "type": "string",
+          "description": "PascalCase component name"
+        },
+        "description": {
+          "type": "string"
+        },
+        "tokens": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of opaque token references used"
+        },
+        "properties": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Property" }
+        },
+        "events": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Event" }
+        },
+        "slots": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Slot" }
+        },
+        "states": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/State" }
+        }
+      }
+    },
+    "Property": {
+      "type": "object",
+      "required": ["name", "type"],
+      "properties": {
+        "name": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["string", "number", "boolean", "enum", "array", "object"]
+        },
+        "required": { "type": "boolean", "default": false },
+        "default": { "description": "Default value" },
+        "allowedValues": {
+          "type": "array",
+          "description": "Enumerated values if type is enum"
+        },
+        "description": { "type": "string" }
+      }
+    },
+    "Event": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "payloadType": {
+          "type": "string",
+          "description": "TypeScript type definition for the event detail"
+        }
+      }
+    },
+    "Slot": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [
+            "default",
+            "icon",
+            "start-adornment",
+            "end-adornment",
+            "header-actions",
+            "footer"
+          ]
+        },
+        "description": { "type": "string" }
+      }
+    },
+    "State": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    }
+  }
+}
