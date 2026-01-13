@@ -71,7 +71,7 @@ import{b as f}from"./lit-element-DzDB2M57.js";class k extends HTMLElement{static
 
         .kds-btn--outlined {
           background-color: transparent;
-          border-color: var(--kds-comp-outline); 
+          border-color: var(--kds-comp-primary);
           color: var(--kds-comp-primary);
           border-width: 1px;
         }
@@ -134,7 +134,7 @@ import{b as f}from"./lit-element-DzDB2M57.js";class k extends HTMLElement{static
         icon="${e.icon}">
         ${e.label}
       </kds-button>
-    `},a={},o={args:{appearance:"outlined"}},s={args:{appearance:"tonal"}},n={args:{state:"disabled"}},r={args:{hasIcon:!0,icon:"favorite"}};a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:"{}",...a.parameters?.docs?.source}}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
+    `},a={},o={args:{appearance:"outlined"}},s={args:{appearance:"tonal"}},r={args:{state:"disabled"}},n={args:{hasIcon:!0,icon:"favorite"}};a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:"{}",...a.parameters?.docs?.source}}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
   args: {
     appearance: 'outlined'
   }
@@ -142,13 +142,13 @@ import{b as f}from"./lit-element-DzDB2M57.js";class k extends HTMLElement{static
   args: {
     appearance: 'tonal'
   }
-}`,...s.parameters?.docs?.source}}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
+}`,...s.parameters?.docs?.source}}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
   args: {
     state: 'disabled'
   }
-}`,...n.parameters?.docs?.source}}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
+}`,...r.parameters?.docs?.source}}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
   args: {
     hasIcon: true,
     icon: 'favorite'
   }
-}`,...r.parameters?.docs?.source}}};const x=["Default","Outlined","Tonal","Disabled","WithIcon"],S=Object.freeze(Object.defineProperty({__proto__:null,Default:a,Disabled:n,Outlined:o,Tonal:s,WithIcon:r,__namedExportsOrder:x,default:v},Symbol.toStringTag,{value:"Module"}));export{S as B};
+}`,...n.parameters?.docs?.source}}};const x=["Default","Outlined","Tonal","Disabled","WithIcon"],S=Object.freeze(Object.defineProperty({__proto__:null,Default:a,Disabled:r,Outlined:o,Tonal:s,WithIcon:n,__namedExportsOrder:x,default:v},Symbol.toStringTag,{value:"Module"}));export{S as B,a as D,o as O,s as T,n as W,r as a};
