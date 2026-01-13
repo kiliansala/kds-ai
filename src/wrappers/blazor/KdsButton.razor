@@ -1,0 +1,51 @@
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Web
+
+<kds-button
+    appearance="@Appearance"
+    state="@State"
+    has-icon="@(HasIcon ? "" : null)"
+    label="@Label"
+    icon="@Icon"
+    @attributes="AdditionalAttributes"
+    @onclick="OnClick"
+    class="@Class">
+    @ChildContent
+</kds-button>
+
+@code {
+    [Parameter]
+    public string Appearance { get; set; } = "filled";
+
+    [Parameter]
+    public string State { get; set; } = "enabled";
+
+    [Parameter]
+    public bool HasIcon { get; set; } = false;
+
+    [Parameter]
+    public string Label { get; set; } = "";
+
+    [Parameter]
+    public string Icon { get; set; } = "add";
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnKdsClick { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object>? AdditionalAttributes { get; set; }
+
+    [Parameter]
+    public string? Class { get; set; }
+
+    private async Task OnClick(MouseEventArgs e)
+    {
+        if (OnKdsClick.HasDelegate)
+        {
+            await OnKdsClick.InvokeAsync(e);
+        }
+    }
+}

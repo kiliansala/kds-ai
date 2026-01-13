@@ -127,26 +127,32 @@ function getVariableByCssName(cssName) {
 function generateTokenTable(tokenList) {
     if (!tokenList || tokenList.length === 0) return '<p>No tokens used.</p>';
     
+    // Mimic Storybook Controls Table Styles
+    // Card container with border and radius
     let html = `
-<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '1rem', marginBottom: '2rem', fontSize: '14px' }}>
-    <thead>
-        <tr style={{ borderBottom: '1px solid #eee', textAlign: 'left', color: '#999', textTransform: 'uppercase', fontSize: '11px' }}>
-            <th style={{ padding: '12px 0' }}>Token Name</th>
-            <th style={{ padding: '12px 0' }}>Light</th>
-            <th style={{ padding: '12px 0' }}>Dark</th>
-            <th style={{ padding: '12px 0' }}>CSS Variable</th>
-        </tr>
-    </thead>
-    <tbody>`;
+<div style={{ border: '1px solid #E6E6E6', borderRadius: '4px', overflow: 'hidden', marginTop: '1rem', marginBottom: '2rem', fontFamily: '"Nunito Sans", -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif' }}>
+    <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
+        <thead>
+            <tr style={{ background: '#F5F5F5', borderBottom: '1px solid #E6E6E6' }}>
+                <th style={{ padding: '10px 15px', textAlign: 'left', fontWeight: 'bold', color: '#333333', border: 0 }}>Token Name</th>
+                <th style={{ padding: '10px 15px', textAlign: 'left', fontWeight: 'bold', color: '#333333', border: 0 }}>Light</th>
+                <th style={{ padding: '10px 15px', textAlign: 'left', fontWeight: 'bold', color: '#333333', border: 0 }}>Dark</th>
+                <th style={{ padding: '10px 15px', textAlign: 'left', fontWeight: 'bold', color: '#333333', border: 0 }}>CSS Variable</th>
+            </tr>
+        </thead>
+        <tbody>`;
 
-    tokenList.forEach(tName => {
+    tokenList.forEach((tName, index) => {
+        const isLast = index === tokenList.length - 1;
+        const borderProp = isLast ? '' : "borderBottom: '1px solid #E6E6E6',";
+        
         const res = getVariableByCssName(tName);
         if (!res) {
             html += `
-        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
-            <td style={{ padding: '16px 0' }}><strong>${tName}</strong></td>
-            <td colspan="2" style={{ padding: '16px 0', color: '#999' }}><em>Not found</em></td>
-            <td style={{ padding: '16px 0' }}><code>${tName}</code></td>
+        <tr style={{ ${borderProp} backgroundColor: '#ffffff' }}>
+            <td style={{ padding: '10px 15px' }}><strong>${tName}</strong></td>
+            <td colspan="2" style={{ padding: '10px 15px', color: '#666' }}><em>Not found</em></td>
+            <td style={{ padding: '10px 15px' }}><code>${tName}</code></td>
         </tr>`;
             return;
         }
@@ -159,35 +165,36 @@ function generateTokenTable(tokenList) {
         const lightVal = resolveValueRecursive(variable, modes[0].modeId);
         const darkVal = modes.length > 1 ? resolveValueRecursive(variable, modes[1].modeId) : lightVal;
 
-        const swatch = (val) => isColor ? `<div style={{ width: '14px', height: '14px', background: '${val}', border: '1px solid #eee', borderRadius: '3px', marginRight: '8px' }}></div>` : '';
+        const swatch = (val) => isColor ? `<div style={{ width: '16px', height: '16px', background: '${val}', border: '1px solid #eee', borderRadius: '4px', marginRight: '8px' }}></div>` : '';
 
         html += `
-        <tr style={{ borderBottom: '1px solid #f9f9f9' }}>
-            <td style={{ padding: '16px 0' }}>
-                <div style={{ fontWeight: '600', color: '#1a1a1b' }}>${name}</div>
-                <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}>${path}</div>
+        <tr style={{ ${borderProp} backgroundColor: '#ffffff' }}>
+            <td style={{ padding: '10px 15px', border: 0 }}>
+                <div style={{ fontWeight: '600', color: '#333' }}>${name}</div>
+                <div style={{ fontSize: '12px', color: '#777', marginTop: '2px' }}>${path}</div>
             </td>
-            <td style={{ padding: '16px 0' }}>
+            <td style={{ padding: '10px 15px', border: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     ${swatch(lightVal)}
-                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>${lightVal}</code>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#F8F9FA', padding: '2px 4px', borderRadius: '3px', border: '1px solid #eee' }}>${lightVal}</code>
                 </div>
             </td>
-            <td style={{ padding: '16px 0' }}>
+            <td style={{ padding: '10px 15px', border: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     ${swatch(darkVal)}
-                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#f8f9fa', padding: '2px 4px', borderRadius: '3px' }}>${darkVal}</code>
+                    <code style={{ fontSize: '12px', color: '#e83e8c', background: '#F8F9FA', padding: '2px 4px', borderRadius: '3px', border: '1px solid #eee' }}>${darkVal}</code>
                 </div>
             </td>
-            <td style={{ padding: '16px 0' }}>
-                <code style={{ fontSize: '12px', color: '#666', background: '#f0f0f0', padding: '2px 6px', borderRadius: '4px' }}>${tName.startsWith('--') ? tName : `--${tName}`}</code>
+            <td style={{ padding: '10px 15px', border: 0 }}>
+                <code style={{ fontSize: '12px', color: '#666', background: '#F0F0F0', padding: '2px 6px', borderRadius: '4px' }}>${tName.startsWith('--') ? tName : `--${tName}`}</code>
             </td>
         </tr>`;
     });
 
     html += `
-    </tbody>
-</table>`;
+        </tbody>
+    </table>
+</div>`;
 
     return html;
 }

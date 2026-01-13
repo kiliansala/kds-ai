@@ -1,89 +1,4 @@
-/**
- * KdsButton
- * Contract-compliant implementation of the Button component.
- * 
- * Properties (Strict Figma Match):
- * - appearance: filled | outlined | text | elevated | tonal
- * - disabled: boolean (Figma State)
- * - hasIcon: boolean (Figma Show Icon)
- * - label: string (Figma Text Content)
- * - icon: string (Figma Icon Instance Name)
- */
-export class KdsButton extends HTMLElement {
-  static get observedAttributes() {
-    return [
-      'appearance', 'state', 'has-icon', 'label', 'icon'
-    ];
-  }
-
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-  }
-
-  connectedCallback() {
-    this.render();
-    this.setupEventListeners();
-  }
-
-  attributeChangedCallback(name: string, oldValue: string, newValue: string) {
-    if (oldValue !== newValue) {
-      this.render();
-    }
-  }
-
-  // Props
-  get appearance() { return this.getAttribute('appearance') || 'filled'; }
-  set appearance(val) { this.setAttribute('appearance', val); }
-
-  // State handles the enabled/disabled status matching Figma
-  get state() { return this.getAttribute('state') || 'enabled'; }
-  set state(val) { this.setAttribute('state', val); }
-
-  // Derived disabled property for internal logic
-  get disabled() { return this.state === 'disabled'; }
-
-  get hasIcon() { return this.hasAttribute('has-icon') && this.getAttribute('has-icon') !== 'false'; }
-  set hasIcon(val) { val ? this.setAttribute('has-icon', '') : this.removeAttribute('has-icon'); }
-
-  get label() { return this.getAttribute('label') || ''; }
-  
-  get icon() { return this.getAttribute('icon') || 'add'; }
-  set icon(val) { this.setAttribute('icon', val); }
-
-  // Functional props (Internal use)
-  get type() { return this.getAttribute('type') || 'button'; }
-  get href() { return this.getAttribute('href'); }
-  
-  private setupEventListeners() {
-    this.shadowRoot?.addEventListener('click', (e) => {
-      // Prevent click if state is disabled
-      if (this.disabled) {
-        e.preventDefault();
-        e.stopPropagation();
-        return;
-      }
-      
-      this.dispatchEvent(new CustomEvent('kds-click', {
-        bubbles: true,
-        composed: true,
-        detail: { originalEvent: e }
-      }));
-    });
-  }
-
-  render() {
-    if (!this.shadowRoot) return;
-
-    const appearance = this.appearance;
-    const disabled = this.disabled; // Derived from state
-    const hasIcon = this.hasIcon;
-    const label = this.label;
-    const iconName = this.icon;
-    const href = this.href;
-
-    // Use default 'md' size styles hardcoded since 'size' prop is removed from Figma
-    const style = `
+import{b as f}from"./lit-element-DzDB2M57.js";class k extends HTMLElement{static get observedAttributes(){return["appearance","state","has-icon","label","icon"]}constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){this.render(),this.setupEventListeners()}attributeChangedCallback(t,l,i){l!==i&&this.render()}get appearance(){return this.getAttribute("appearance")||"filled"}set appearance(t){this.setAttribute("appearance",t)}get state(){return this.getAttribute("state")||"enabled"}set state(t){this.setAttribute("state",t)}get disabled(){return this.state==="disabled"}get hasIcon(){return this.hasAttribute("has-icon")&&this.getAttribute("has-icon")!=="false"}set hasIcon(t){t?this.setAttribute("has-icon",""):this.removeAttribute("has-icon")}get label(){return this.getAttribute("label")||""}get icon(){return this.getAttribute("icon")||"add"}set icon(t){this.setAttribute("icon",t)}get type(){return this.getAttribute("type")||"button"}get href(){return this.getAttribute("href")}setupEventListeners(){this.shadowRoot?.addEventListener("click",t=>{if(this.disabled){t.preventDefault(),t.stopPropagation();return}this.dispatchEvent(new CustomEvent("kds-click",{bubbles:!0,composed:!0,detail:{originalEvent:t}}))})}render(){if(!this.shadowRoot)return;const t=this.appearance,l=this.disabled,i=this.hasIcon,p=this.label,b=this.icon,c=this.href,u=`
       <style>
         :host {
           display: inline-block;
@@ -156,7 +71,7 @@ export class KdsButton extends HTMLElement {
 
         .kds-btn--outlined {
           background-color: transparent;
-          border-color: var(--kds-comp-primary);
+          border-color: var(--kds-comp-outline); 
           color: var(--kds-comp-primary);
           border-width: 1px;
         }
@@ -202,31 +117,38 @@ export class KdsButton extends HTMLElement {
       </style>
       <!-- We need to import the font style inside Shadow DOM or use a constructed stylesheet -->
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    `;
-
-    const disabledAttr = disabled ? 'disabled' : '';
-    const classes = [
-      'kds-btn',
-      `kds-btn--${appearance}`,
-      `kds-btn--${this.state}`,
-      hasIcon ? 'kds-btn--has-icon' : ''
-    ].join(' ');
-    
-    const tag = href ? 'a' : 'button';
-    const typeAttr = href ? '' : `type="${this.type}"`;
-    const hrefAttr = href ? `href="${href}"` : '';
-
-    // Simplified rendering with slots support
-    this.shadowRoot.innerHTML = `
-      ${style}
-      <${tag} class="${classes}" ${typeAttr} ${hrefAttr} ${disabledAttr}>
+    `,h=l?"disabled":"",m=["kds-btn",`kds-btn--${t}`,`kds-btn--${this.state}`,i?"kds-btn--has-icon":""].join(" "),d=c?"a":"button",g=c?"":`type="${this.type}"`,y=c?`href="${c}"`:"";this.shadowRoot.innerHTML=`
+      ${u}
+      <${d} class="${m}" ${g} ${y} ${h}>
         <slot name="icon">
-           ${hasIcon ? `<span class="material-symbols-outlined">${iconName}</span>` : ''}
+           ${i?`<span class="material-symbols-outlined">${b}</span>`:""}
         </slot>
-        <slot>${label}</slot>
-      </${tag}>
-    `;
+        <slot>${p}</slot>
+      </${d}>
+    `}}customElements.define("kds-button",k);const v={title:"Components/Button",component:"kds-button",argTypes:{appearance:{name:"Appearance",control:{type:"select"},options:["filled","outlined","text","elevated","tonal"],description:"Visual style matching Figma."},state:{name:"State",control:{type:"select"},options:["enabled","disabled","hovered","focused","pressed"],description:"Interaction state."},hasIcon:{name:"Show Icon",control:{type:"boolean"},description:"Toggles icon visibility."},label:{name:"Label text",control:{type:"text"},description:"Text content."},icon:{name:"Icon name",control:{type:"text"},description:"Icon instance name."}},args:{appearance:"filled",state:"enabled",hasIcon:!1,label:"Button",icon:"add"},render:e=>f`
+      <kds-button 
+        appearance="${e.appearance}" 
+        state="${e.state}" 
+        ?has-icon="${e.hasIcon}" 
+        label="${e.label}" 
+        icon="${e.icon}">
+        ${e.label}
+      </kds-button>
+    `},a={},o={args:{appearance:"outlined"}},s={args:{appearance:"tonal"}},n={args:{state:"disabled"}},r={args:{hasIcon:!0,icon:"favorite"}};a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:"{}",...a.parameters?.docs?.source}}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
+  args: {
+    appearance: 'outlined'
   }
-}
-
-customElements.define('kds-button', KdsButton);
+}`,...o.parameters?.docs?.source}}};s.parameters={...s.parameters,docs:{...s.parameters?.docs,source:{originalSource:`{
+  args: {
+    appearance: 'tonal'
+  }
+}`,...s.parameters?.docs?.source}}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
+  args: {
+    state: 'disabled'
+  }
+}`,...n.parameters?.docs?.source}}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
+  args: {
+    hasIcon: true,
+    icon: 'favorite'
+  }
+}`,...r.parameters?.docs?.source}}};const x=["Default","Outlined","Tonal","Disabled","WithIcon"],S=Object.freeze(Object.defineProperty({__proto__:null,Default:a,Disabled:n,Outlined:o,Tonal:s,WithIcon:r,__namedExportsOrder:x,default:v},Symbol.toStringTag,{value:"Module"}));export{S as B};
