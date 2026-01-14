@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ESNext", "DOM"],
+    "allowJs": true,
+    "checkJs": false,
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "types": ["vite/client"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "contracts/**/*.ts",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/components/FrameworkSnippets.tsx",
+    "src/wrappers",
+    "src/**/*.tsx"
+  ]
+}

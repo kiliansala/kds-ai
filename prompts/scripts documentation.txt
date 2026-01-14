@@ -1,0 +1,10 @@
+Listado de scripts definidos en package.json y su propósito:
+npm run dev: arranca Vite en modo desarrollo (servidor de dev).
+npm run build: ejecuta el compilado TypeScript (tsc) y luego el build de Vite para generar la versión de producción.
+npm run preview: levanta el preview de Vite sobre el build generado.
+npm run validate: ejecuta scripts/validate.js para validar contratos/esquemas (AJV).
+npm run tokens:sync: ejecuta scripts/sync-tokens.mjs; descarga los tokens desde Figma a figma/tokens.{primitive,semantic,components}.json.
+npm run tokens:build: ejecuta scripts/generate-token-docs.mjs; lee los tokens de figma/ y genera src/tokens/tokens-data.json (alias, canónicos, etc.).
+npm run tokens:watch: vigila cambios en figma/tokens.*.json con chokidar y lanza tokens:build al detectar cambios.
+npm run tokens:css: ejecuta scripts/transform-tokens.mjs; publica las variables CSS en src/styles/tokens.css a partir de los tokens de figma/.
+npm run tokens:export: ejecuta scripts/export-w3c-tokens.mjs; exporta los tres ficheros de tokens de Figma a formato W3C en dist/tokens.{primitive,semantic,components}.w3c.json, conservando alias y limpiando metadatos no compatibles.

@@ -12,7 +12,13 @@
 export class KdsButton extends HTMLElement {
   static get observedAttributes() {
     return [
-      'appearance', 'state', 'has-icon', 'label', 'icon'
+      'appearance',
+      'state',
+      'has-icon',
+      'label',
+      'icon',
+      'href',
+      'type'
     ];
   }
 
@@ -53,7 +59,9 @@ export class KdsButton extends HTMLElement {
 
   // Functional props (Internal use)
   get type() { return this.getAttribute('type') || 'button'; }
+  set type(val) { this.setAttribute('type', val); }
   get href() { return this.getAttribute('href'); }
+  set href(val) { val ? this.setAttribute('href', val) : this.removeAttribute('href'); }
   
   private setupEventListeners() {
     this.shadowRoot?.addEventListener('click', (e) => {
@@ -81,6 +89,7 @@ export class KdsButton extends HTMLElement {
     const label = this.label;
     const iconName = this.icon;
     const href = this.href;
+    const isLink = Boolean(href);
 
     // Use default 'md' size styles hardcoded since 'size' prop is removed from Figma
     const style = `
@@ -142,6 +151,11 @@ export class KdsButton extends HTMLElement {
         .kds-btn:focus-visible::after,
         .kds-btn--focused::after {
             opacity: var(--kds-comp-primary-opacity-12, 0.12);
+        }
+        .kds-btn:focus-visible,
+        .kds-btn--focused {
+          outline: 2px solid var(--kds-comp-outline-variant, currentColor);
+          outline-offset: 2px;
         }
 
         .kds-btn:active::after,
@@ -205,6 +219,9 @@ export class KdsButton extends HTMLElement {
     `;
 
     const disabledAttr = disabled ? 'disabled' : '';
+    const ariaDisabled = disabled ? 'aria-disabled="true"' : '';
+    const tabIndex = disabled && isLink ? 'tabindex="-1"' : '';
+    const roleAttr = isLink ? 'role="button"' : '';
     const classes = [
       'kds-btn',
       `kds-btn--${appearance}`,
@@ -212,14 +229,14 @@ export class KdsButton extends HTMLElement {
       hasIcon ? 'kds-btn--has-icon' : ''
     ].join(' ');
     
-    const tag = href ? 'a' : 'button';
+    const tag = isLink ? 'a' : 'button';
     const typeAttr = href ? '' : `type="${this.type}"`;
-    const hrefAttr = href ? `href="${href}"` : '';
+    const hrefAttr = href && !disabled ? `href="${href}"` : '';
 
     // Simplified rendering with slots support
     this.shadowRoot.innerHTML = `
       ${style}
-      <${tag} class="${classes}" ${typeAttr} ${hrefAttr} ${disabledAttr}>
+      <${tag} class="${classes}" ${typeAttr} ${hrefAttr} ${disabledAttr} ${ariaDisabled} ${tabIndex} ${roleAttr}>
         <slot name="icon">
            ${hasIcon ? `<span class="material-symbols-outlined">${iconName}</span>` : ''}
         </slot>

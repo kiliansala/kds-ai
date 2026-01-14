@@ -43,6 +43,10 @@ nav a {
   text-decoration: none;
 }
 
+.no-underline {
+  text-decoration: none !important;
+}
+
 nav a:hover,
 nav a.active {
   color: #1484ff;

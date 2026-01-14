@@ -25,20 +25,16 @@ The system operates on a closed-loop pipeline:
     - A property change in Figma triggers an update via MCP-based agents.
     - The agent updates the contract and the implementation.
     - The change is strictly limited to the exposed API in Figma.
-5.  **Visual Verification**: The updated code is immediately verifiable via the generated documentation and Storybook.
+5.  **Visual Verification**: The updated code is verifiable en el dev-app (playground) usando `npm run dev`.
 
-## Token Status: PENDING
+## Tokens (Figma SSOT)
 
-> **CRITICAL**: Design tokens are currently treated as **opaque external dependencies**.
-
-- This contract does **NOT** define, rename, or normalize tokens.
-- We do **NOT** assume a specific token structure (e.g., standard W3C format vs Figma variables).
-- Visual definitions (CSS, styles) are out of scope for the contract itself; the contract only defines where tokens are applied (e.g., "accepts a color token").
+- Los tokens provienen de Figma (`figma/tokens.*.json`) y se consumen a través del artefacto `src/tokens/tokens-data.json`.
+- La prioridad de dedupe/alias es Primitive > Semantic > Components y se refleja en `canonicalByKey` y `aliasToCanonical`.
+- El contrato puede listar qué tokens aplica cada componente, pero los valores y alias se resuelven desde `tokens-data.json`.
 
 ## Validation Strategy
 
-This contract enables automated validation across multiple platforms without manual intervention:
+This contract enables automated validation without manual intervention:
 
-- **Web Documentation**: Documentation pages are derived directly from the contract metadata.
-- **Storybook**: Stories are auto-generated. All variants and states are enumerable, allowing for exhaustive visual testing.
-- **Playgrounds**: Live playgrounds allow manipulation of every public property defined here, ensuring the implementation matches the contract 1:1.
+- **Dev-app / Playground**: Live playground (`npm run dev`) allows manipulation of every public property defined here, ensuring the implementation matches the contract 1:1.

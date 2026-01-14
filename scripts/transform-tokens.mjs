@@ -2,9 +2,9 @@ import fs from 'fs';
 import path from 'path';
 
 const FILES = [
-  'tokens.components.json',
-  'tokens.semantic.json',
-  'tokens.primitive.json'
+  'figma/tokens.primitive.json',
+  'figma/tokens.semantic.json',
+  'figma/tokens.components.json'
 ];
 
 /**
@@ -99,7 +99,7 @@ async function transform() {
     const collection = collections[variable.variableCollectionId];
     if (!collection) continue;
 
-    const sourceFile = variableSource[id];
+    const sourceFile = path.basename(variableSource[id] || '');
     const modeId = collection.defaultModeId || collection.modes[0].modeId;
     let value = resolveValue(variable, allVariables, modeId);
     

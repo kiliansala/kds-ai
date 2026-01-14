@@ -27,10 +27,12 @@ figma.connect(
         false: ''
       }),
       label: figma.string('Label text'),
-      // Just pass the icon name always. The component determines visibility based on has-icon.
+      // Capture the icon instance so we can extract its name; component expects a string token.
       icon: figma.instance('Icon'), 
     },
-    example: ({ appearance, state, hasIcon, label, icon }) => 
-      html`<kds-button appearance="${appearance}"${state}${hasIcon} icon="${icon}">${label}</kds-button>`
+    example: ({ appearance, state, hasIcon, label, icon }) => {
+      const iconName = (icon as any)?.name ?? icon ?? 'add';
+      return html`<kds-button appearance="${appearance}"${state}${hasIcon} icon="${iconName}">${label}</kds-button>`;
+    }
   }
 );

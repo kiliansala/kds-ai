@@ -7,6 +7,7 @@
     has-icon="@(HasIcon ? "" : null)"
     label="@Label"
     icon="@Icon"
+    href="@Href"
     @attributes="AdditionalAttributes"
     @onclick="OnClick"
     class="@Class">
@@ -28,6 +29,9 @@
 
     [Parameter]
     public string Icon { get; set; } = "add";
+
+    [Parameter]
+    public string? Href { get; set; }
 
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
