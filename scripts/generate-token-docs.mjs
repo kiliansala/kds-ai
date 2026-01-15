@@ -2,9 +2,9 @@ import fs from 'fs';
 import path from 'path';
 
 const TOKEN_FILES = {
-  Primitives: 'figma/tokens.primitive.json',
-  Semantic: 'figma/tokens.semantic.json',
-  Components: 'figma/tokens.components.json'
+  Primitives: 'figma/variables.primitive.json',
+  Semantic: 'figma/variables.semantic.json',
+  Components: 'figma/variables.components.json'
 };
 
 const TOKEN_ORDER = ['Primitives', 'Semantic', 'Components'];
@@ -15,6 +15,7 @@ const playgroundData = {
   allVariables: {},
   canonicalByKey: {},
   aliasToCanonical: {},
+  cssToFullId: {},
   aliasChains: {},
   order: TOKEN_ORDER
 };
@@ -30,60 +31,32 @@ function getShortId(id) {
   return id;
 }
 
-function getCssVarName(variable, collection, sourceFile) {
-  if (!variable || !collection) return '--kds-unknown';
+function normalizeTokenPath(name) {
+  if (!name) return '';
+  return name
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/\//g, '.')
+    .replace(/[^a-z0-9.\-]/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/\.-/g, '.')
+    .replace(/-\./g, '.');
+}
 
-  const normalizedName = variable.name.toLowerCase().replace(/[\/\s]/g, '-');
-  const collectionName = collection.name.toLowerCase();
-  const fileName = path.basename(sourceFile || '');
-
-  const isComponentSource = fileName === 'tokens.components.json';
-  const isComponentColl = collectionName === 'components';
-  const isStateColl = collectionName === 'states';
-
-  if (isComponentSource && (isComponentColl || isStateColl)) {
-    return `--kds-comp-${normalizedName}`;
-  }
-  if (collectionName === 'key' || collectionName === 'colors') {
-    return `--kds-sys-color-${normalizedName}`;
-  }
-  if (collectionName === 'typography' || collectionName === 'typescale') {
-    return `--kds-typography-${normalizedName}`;
-  }
-  if (collectionName === 'space') {
-    return `--kds-sys-space-${normalizedName}`;
-  }
-  if (collectionName === 'components') {
-    return `--kds-comp-${normalizedName}`;
-  }
-  if (collectionName === 'states') {
-    return `--kds-state-${normalizedName}`;
-  }
-
-  let cssName = `--kds-${collectionName}-${normalizedName}`;
-
-  if (!isComponentSource) {
-    if (normalizedName === 'primary') cssName = '--kds-sys-color-primary';
-    if (normalizedName === 'on-primary') cssName = '--kds-sys-color-on-primary';
-    if (normalizedName === 'secondary-container') cssName = '--kds-sys-color-secondary-container';
-    if (normalizedName === 'on-surface-variant') cssName = '--kds-sys-color-on-surface-variant';
-
-    if (normalizedName.includes('hover') && normalizedName.includes('opacity')) {
-      cssName = '--kds-state-layer-opacity-hover';
-    } else if (normalizedName.includes('focus') && normalizedName.includes('opacity')) {
-      cssName = '--kds-state-layer-opacity-focus';
-    } else if (normalizedName.includes('press') && normalizedName.includes('opacity')) {
-      cssName = '--kds-state-layer-opacity-press';
-    } else if (normalizedName.endsWith('opacity-08')) {
-      cssName = '--kds-state-layer-opacity-hover';
-    } else if (normalizedName.endsWith('opacity-12')) {
-      cssName = '--kds-state-layer-opacity-focus';
-    } else if (normalizedName.endsWith('opacity-16')) {
-      cssName = '--kds-state-layer-opacity-press';
-    }
-  }
-
-  return cssName;
+function getCssVarName(variable, collection, sourceFile, level) {
+  if (!variable || !collection || !level) return '--kds-unknown';
+  const normalizedPath = normalizeTokenPath(variable.name);
+  const normalizedCollection = normalizeTokenPath(collection.name);
+  const prefixMap = {
+    Primitives: '--kds-pri.',
+    Semantic: '--kds-sem.',
+    Components: '--kds-comp.'
+  };
+  const prefix = prefixMap[level] || '--kds-unknown.';
+  const path = normalizedCollection
+    ? `${normalizedCollection}.${normalizedPath}`
+    : normalizedPath;
+  return `${prefix}${path}`;
 }
 
 function resolveAliasCssName(variable, allVars, visited = new Set()) {
@@ -132,10 +105,9 @@ function buildAliasChain(variable, allVars, canonicalByKey, aliasToCanonical) {
       const targetSid = getShortId(valObj.id);
       const targetVar = allVars[targetSid];
       if (targetVar) {
-        // If the target is same level (duplicate), try jumping to canonical to avoid stopping at duplicates
+        // If the target is same level (duplicate), prefer its canonical entry (keeps Semantic hop) before jumping straight to a deduped alias
         if (targetVar.level === current.level) {
-          const canonicalCss = aliasToCanonical[targetVar.cssName] || targetVar.cssName;
-          const canonical = canonicalByKey[canonicalCss];
+          const canonical = canonicalByKey[targetVar.cssName];
           if (canonical) {
             const fallbackVar = allVars[canonical.id];
             if (fallbackVar) {
@@ -177,7 +149,7 @@ function ingestFile(level, relativePath) {
   for (const [id, variable] of Object.entries(variables)) {
     const sid = getShortId(id);
     const collection = collections[variable.variableCollectionId];
-    const cssName = getCssVarName(variable, collection, relativePath);
+    const cssName = getCssVarName(variable, collection, relativePath, level);
     const defaultModeId = collection?.defaultModeId || collection?.modes?.[0]?.modeId;
 
     variable.cssName = cssName;
@@ -185,6 +157,23 @@ function ingestFile(level, relativePath) {
     variable.level = level;
     variable.shortId = sid;
     if (defaultModeId) variable.defaultModeId = defaultModeId;
+
+    // Keep track of first occurrence (highest priority) full id per cssName
+    if (!playgroundData.cssToFullId[cssName]) {
+      playgroundData.cssToFullId[cssName] = id;
+    } else {
+      // If this is a lower-priority level and css already defined, make it an alias to the canonical
+      const targetFullId = playgroundData.cssToFullId[cssName];
+      const modeKey = variable.defaultModeId || (variable.valuesByMode ? Object.keys(variable.valuesByMode)[0] : undefined);
+      if (modeKey) {
+        variable.valuesByMode = {
+          [modeKey]: {
+            type: 'VARIABLE_ALIAS',
+            id: targetFullId
+          }
+        };
+      }
+    }
 
     if (!playgroundData.allVariables[sid]) {
       playgroundData.allVariables[sid] = variable;

@@ -1,0 +1,58 @@
+{
+  "semantic": {
+    "typeface": {
+      "brand": {
+        "baseline": {
+          "$type": "number",
+          "$value": "{primitive.typeface.brand.baseline}"
+        },
+        "wireframe": {
+          "$type": "number",
+          "$value": "{primitive.typeface.brand.wireframe}"
+        }
+      },
+      "plain": {
+        "baseline": {
+          "$type": "number",
+          "$value": "{primitive.typeface.plain.baseline}"
+        },
+        "wireframe": {
+          "$type": "number",
+          "$value": "{primitive.typeface.plain.wireframe}"
+        }
+      },
+      "weight": {
+        "regular": {
+          "baseline": {
+            "$type": "number",
+            "$value": "{primitive.typeface.weight.regular.baseline}"
+          },
+          "wireframe": {
+            "$type": "number",
+            "$value": "{primitive.typeface.weight.regular.wireframe}"
+          }
+        },
+        "medium": {
+          "baseline": {
+            "$type": "number",
+            "$value": "{primitive.typeface.weight.medium.baseline}"
+          },
+          "wireframe": {
+            "$type": "number",
+            "$value": "{primitive.typeface.weight.medium.wireframe}"
+          }
+        },
+        "bold": {
+          "baseline": {
+            "$type": "number",
+            "$value": "{primitive.typeface.weight.bold.baseline}"
+          },
+          "wireframe": {
+            "$type": "number",
+            "$value": "{primitive.typeface.weight.bold.wireframe}"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "components": {
+    "colors": {
+      "ramps": {
+        "red": {
+          "10": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.red.10}"
+          },
+          "16": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.red.16}"
+          },
+          "23": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.red.23}"
+          },
+          "30": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.red.30}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.red.70}"
+          },
+          "88": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.red.88}"
+          }
+        },
+        "blue": {
+          "7": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.7}"
+          },
+          "10": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.10}"
+          },
+          "27": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.27}"
+          },
+          "36": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.36}"
+          },
+          "38": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.38}"
+          },
+          "45": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.45}"
+          },
+          "53": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.53}"
+          },
+          "67": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.67}"
+          },
+          "81": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.81}"
+          },
+          "83": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.83}"
+          },
+          "84": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.84}"
+          },
+          "92": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.92}"
+          },
+          "99": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.99}"
+          }
+        },
+        "indigo": {
+          "11": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.indigo.11}"
+          },
+          "13": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.indigo.13}"
+          },
+          "21": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.indigo.21}"
+          },
+          "30": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.indigo.30}"
+          },
+          "44": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.indigo.44}"
+          },
+          "74": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.indigo.74}"
+          },
+          "75": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.indigo.75}"
+          },
+          "80": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.indigo.80}"
+          },
+          "88": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.indigo.88}"
+          }
+        },
+        "purple": {
+          "13": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.purple.13}"
+          },
+          "21": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.purple.21}"
+          },
+          "31": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.purple.31}"
+          },
+          "34": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.purple.34}"
+          },
+          "46": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.purple.46}"
+          },
+          "80": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.purple.80}"
+          },
+          "89": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.purple.89}"
+          },
+          "97": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.purple.97}"
+          }
+        },
+        "gray": {
+          "0": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.0}"
+          },
+          "3": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.3}"
+          },
+          "5": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.5}"
+          },
+          "6": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.6}"
+          },
+          "7": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.7}"
+          },
+          "9": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.9}"
+          },
+          "13": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.13}"
+          },
+          "15": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.15}"
+          },
+          "16": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.16}"
+          },
+          "18": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.18}"
+          },
+          "22": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.22}"
+          },
+          "39": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.39}"
+          },
+          "48": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.48}"
+          },
+          "72": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.72}"
+          },
+          "79": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.79}"
+          },
+          "84": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.84}"
+          },
+          "86": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.86}"
+          },
+          "89": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.89}"
+          },
+          "91": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.91}"
+          },
+          "92": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.92}"
+          },
+          "94": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.94}"
+          },
+          "97": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.97}"
+          }
+        }
+      }
+    }
+  }
+}

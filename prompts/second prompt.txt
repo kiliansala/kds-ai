@@ -20,7 +20,7 @@ Dev-app y Storybook
 - MDX: si se necesitan páginas de tokens/Component Docs, se generan con un script separado (`docs:components`), no durante `tokens:build`.
 
 Flujo de tokens (estado deseado)
-- Inputs (descarga desde Figma): `figma/tokens.primitive.json`, `figma/tokens.semantic.json`, `figma/tokens.components.json`.
+- Inputs (descarga desde Figma): `figma/variables.primitive.json`, `figma/variables.semantic.json`, `figma/variables.components.json`.
 - Artefacto consumible: `src/tokens/tokens-data.json` (dev-app/Storybook leen de aquí).
 - Export W3C (pendiente): saldrá en `dist/` cuando se implemente; se usará la misma lógica de dedupe/alias.
 - Dedupe/alias: prioridad Primitive > Semantic > Components; usar `canonicalByKey` y `aliasToCanonical` para resolver cadenas sin duplicados.
@@ -28,12 +28,12 @@ Flujo de tokens (estado deseado)
 Scripts npm (añadir si falta)
 - tokens:sync -> `node scripts/sync-tokens.mjs` (descarga Figma -> figma/).
 - tokens:build -> `node scripts/generate-token-docs.mjs` (lee figma/*.json, genera src/tokens/tokens-data.json).
-- tokens:watch -> `chokidar "figma/tokens.*.json" -c "npm run tokens:build"`.
+- tokens:watch -> `chokidar "figma/variables.*.json" -c "npm run tokens:build"`.
 - docs:components -> `node scripts/generate-component-docs.mjs` (opcional, genera MDX cuando se requiera).
 
 Cambios en scripts
 1) scripts/sync-tokens.mjs
-   - OUTPUT_DIR = 'figma'; mkdir si falta; guardar como figma/tokens.<name>.json.
+   - OUTPUT_DIR = 'figma'; mkdir si falta; guardar como figma/variables.<name>.json.
 2) scripts/generate-token-docs.mjs
    - TOKEN_FILES/TOKEN_ORDER/FILE_PRIORITY/FILE_LEVEL apuntan a figma/... (no a raíz).
    - Generar solo src/tokens/tokens-data.json.
@@ -43,7 +43,7 @@ Cambios en scripts
    - Se ejecuta solo con npm run docs:components (no forma parte del build de tokens).
 4) README
    - Documentar flujos: tokens:sync, tokens:build, tokens:watch, docs:components.
-   - Dev-app/Storybook consumen src/tokens/tokens-data.json; input original viene de figma/tokens.*.json.
+   - Dev-app/Storybook consumen src/tokens/tokens-data.json; input original viene de figma/variables.*.json.
 
 Estado previo y mensajes
 - El log “Generated documentation for Button...” provenía del bloque MDX dentro de generate-token-docs.mjs; al quitarlo ya no debe tocar MDX ni loguear Button.

@@ -1,0 +1,62 @@
+{
+  "primitive": {
+    "space": {
+      "space-0": {
+        "$type": "number",
+        "$value": 0
+      },
+      "space-2": {
+        "$type": "number",
+        "$value": 2
+      },
+      "space-4": {
+        "$type": "number",
+        "$value": 4
+      },
+      "space-6": {
+        "$type": "number",
+        "$value": 6
+      },
+      "space-8": {
+        "$type": "number",
+        "$value": 8
+      },
+      "space-12": {
+        "$type": "number",
+        "$value": 12
+      },
+      "space-16": {
+        "$type": "number",
+        "$value": 16
+      },
+      "space-20": {
+        "$type": "number",
+        "$value": 20
+      },
+      "space-24": {
+        "$type": "number",
+        "$value": 24
+      },
+      "space-32": {
+        "$type": "number",
+        "$value": 32
+      },
+      "space-40": {
+        "$type": "number",
+        "$value": 40
+      },
+      "space-48": {
+        "$type": "number",
+        "$value": 48
+      },
+      "space-64": {
+        "$type": "number",
+        "$value": 64
+      },
+      "space-80": {
+        "$type": "number",
+        "$value": 80
+      }
+    }
+  }
+}

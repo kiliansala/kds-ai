@@ -1,0 +1,86 @@
+{
+  "semantic": {
+    "status": {
+      "error": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.red.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.red.70}"
+        }
+      },
+      "warning": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.orange.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.orange.70}"
+        }
+      },
+      "success": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.green.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.green.70}"
+        }
+      },
+      "info": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.blue.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.blue.70}"
+        }
+      },
+      "critical": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.purple.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.purple.70}"
+        }
+      },
+      "unknown": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.teal.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.teal.70}"
+        }
+      },
+      "disabled": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.gray.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.gray.70}"
+        }
+      },
+      "on-status": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.base.black}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.base.black}"
+        }
+      }
+    }
+  }
+}

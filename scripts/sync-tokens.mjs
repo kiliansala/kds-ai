@@ -50,7 +50,7 @@ const run = async () => {
       console.log(`📥 Fetching ${file.name} tokens (ID: ${file.key})...`);
       const data = await fetchVariables(file.key);
       
-      const fileName = `tokens.${file.name}.json`;
+      const fileName = `variables.${file.name}.json`;
       const filePath = `${OUTPUT_DIR}/${fileName}`;
       fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
       console.log(`✅ Saved ${filePath}`);

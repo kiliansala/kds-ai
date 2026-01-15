@@ -1,0 +1,344 @@
+{
+  "primitive": {
+    "typescale": {
+      "display-large": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.brand}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.regular}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 57
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 64
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": -0.25
+        }
+      },
+      "display-medium": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.brand}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.regular}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 45
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 52
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0
+        }
+      },
+      "display-small": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.brand}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.regular}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 36
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 44
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0
+        }
+      },
+      "headline-large": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.brand}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.regular}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 32
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 40
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0
+        }
+      },
+      "headline-medium": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.brand}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.regular}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 28
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 36
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0
+        }
+      },
+      "headline-small": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.brand}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.regular}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 24
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 32
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0
+        }
+      },
+      "title-large": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.brand}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.regular}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 22
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 28
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0
+        }
+      },
+      "title-medium": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.plain}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.medium}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 16
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 24
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0.15000000596046448
+        }
+      },
+      "title-small": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.plain}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.medium}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 14
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 20
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0.10000000149011612
+        }
+      },
+      "label-large": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.plain}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.medium}"
+        },
+        "weight-prominent": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.bold}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 14
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 20
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0.10000000149011612
+        }
+      },
+      "label-small": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.plain}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.medium}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 11
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 16
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0.5
+        }
+      },
+      "label-medium": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.plain}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.medium}"
+        },
+        "weight-prominent": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.bold}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 12
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 16
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0.5
+        }
+      },
+      "body-large": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.plain}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.regular}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 16
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 24
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0.5
+        }
+      },
+      "body-medium": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.plain}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.regular}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 14
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 20
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0.25
+        }
+      },
+      "body-small": {
+        "font": {
+          "$type": "number",
+          "$value": "{primitive.typeface.plain}"
+        },
+        "weight": {
+          "$type": "number",
+          "$value": "{primitive.typeface.weight.regular}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": 12
+        },
+        "line-height": {
+          "$type": "number",
+          "$value": 16
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": 0.4000000059604645
+        }
+      }
+    }
+  }
+}

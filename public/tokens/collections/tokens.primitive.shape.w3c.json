@@ -1,0 +1,12 @@
+{
+  "primitive": {
+    "shape": {
+      "corner": {
+        "extra-large": {
+          "$type": "number",
+          "$value": 28
+        }
+      }
+    }
+  }
+}

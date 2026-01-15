@@ -6,3 +6,4 @@ dist-ssr
 .npm
 debug-storybook.log
 .env
+figma/token.env

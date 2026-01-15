@@ -3,8 +3,8 @@ npm run dev: arranca Vite en modo desarrollo (servidor de dev).
 npm run build: ejecuta el compilado TypeScript (tsc) y luego el build de Vite para generar la versión de producción.
 npm run preview: levanta el preview de Vite sobre el build generado.
 npm run validate: ejecuta scripts/validate.js para validar contratos/esquemas (AJV).
-npm run tokens:sync: ejecuta scripts/sync-tokens.mjs; descarga los tokens desde Figma a figma/tokens.{primitive,semantic,components}.json.
+npm run tokens:sync: ejecuta scripts/sync-tokens.mjs; descarga las variables desde Figma a figma/variables.{primitive,semantic,components}.json.
 npm run tokens:build: ejecuta scripts/generate-token-docs.mjs; lee los tokens de figma/ y genera src/tokens/tokens-data.json (alias, canónicos, etc.).
-npm run tokens:watch: vigila cambios en figma/tokens.*.json con chokidar y lanza tokens:build al detectar cambios.
-npm run tokens:css: ejecuta scripts/transform-tokens.mjs; publica las variables CSS en src/styles/tokens.css a partir de los tokens de figma/.
-npm run tokens:export: ejecuta scripts/export-w3c-tokens.mjs; exporta los tres ficheros de tokens de Figma a formato W3C en dist/tokens.{primitive,semantic,components}.w3c.json, conservando alias y limpiando metadatos no compatibles.
+npm run tokens:watch: vigila cambios en figma/variables.*.json con chokidar y lanza tokens:build al detectar cambios.
+npm run tokens:css: ejecuta scripts/transform-tokens.mjs; publica las variables CSS en src/styles/tokens.css a partir de los tokens de figma/ con naming por nivel: --kds-pri.<coleccion>.<ruta>, --kds-sem.<coleccion>.<ruta>, --kds-comp.<coleccion>.<ruta> (colección y ruta: Figma collection.name y name en minúsculas, "/" -> ".", espacios -> "-", limpieza de caracteres).
+npm run tokens:export: ejecuta scripts/export-w3c-tokens.mjs; exporta los tres ficheros de variables de Figma a formato W3C en dist/tokens/tokens.{primitive,semantic,components}.w3c.json y en dist/tokens/collections/tokens.<scope>.<collection>.w3c.json, conservando alias y limpiando metadatos no compatibles.

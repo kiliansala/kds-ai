@@ -1,0 +1,58 @@
+{
+  "primitive": {
+    "typeface": {
+      "brand": {
+        "baseline": {
+          "$type": "number",
+          "$value": "Roboto"
+        },
+        "wireframe": {
+          "$type": "number",
+          "$value": "Flow Circular"
+        }
+      },
+      "plain": {
+        "baseline": {
+          "$type": "number",
+          "$value": "Roboto"
+        },
+        "wireframe": {
+          "$type": "number",
+          "$value": "Flow Circular"
+        }
+      },
+      "weight": {
+        "regular": {
+          "baseline": {
+            "$type": "number",
+            "$value": "Regular"
+          },
+          "wireframe": {
+            "$type": "number",
+            "$value": "Regular"
+          }
+        },
+        "medium": {
+          "baseline": {
+            "$type": "number",
+            "$value": "Medium"
+          },
+          "wireframe": {
+            "$type": "number",
+            "$value": "Regular"
+          }
+        },
+        "bold": {
+          "baseline": {
+            "$type": "number",
+            "$value": "Semibold"
+          },
+          "wireframe": {
+            "$type": "number",
+            "$value": "Regular"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "semantic": {
+    "colors": {
+      "base": {
+        "black": {
+          "$type": "color",
+          "$value": "{primitive.colors.base.black}"
+        },
+        "white": {
+          "$type": "color",
+          "$value": "{primitive.colors.base.white}"
+        }
+      },
+      "ramps": {
+        "orange": {
+          "50": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.orange.50}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.orange.70}"
+          }
+        },
+        "red": {
+          "50": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.red.50}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.red.70}"
+          }
+        },
+        "green": {
+          "50": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.green.50}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.green.70}"
+          }
+        },
+        "yellow": {
+          "50": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.yellow.50}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.yellow.70}"
+          }
+        },
+        "teal": {
+          "50": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.teal.50}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.teal.70}"
+          }
+        },
+        "cyan": {
+          "50": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.cyan.50}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.cyan.70}"
+          }
+        },
+        "blue": {
+          "50": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.50}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.blue.70}"
+          }
+        },
+        "indigo": {
+          "50": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.indigo.50}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.indigo.70}"
+          }
+        },
+        "purple": {
+          "50": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.purple.50}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.purple.70}"
+          }
+        },
+        "pink": {
+          "50": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.pink.50}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.pink.70}"
+          }
+        },
+        "brown": {
+          "50": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.brown.50}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.brown.70}"
+          }
+        },
+        "gray": {
+          "50": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.50}"
+          },
+          "70": {
+            "$type": "color",
+            "$value": "{primitive.colors.ramps.gray.70}"
+          }
+        }
+      }
+    }
+  }
+}

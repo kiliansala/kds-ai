@@ -10,9 +10,9 @@
     "validate": "node scripts/validate.js",
     "tokens:sync": "node scripts/sync-tokens.mjs",
     "tokens:build": "node scripts/generate-token-docs.mjs",
-    "tokens:watch": "chokidar \"figma/tokens.*.json\" -c \"npm run tokens:build\"",
+    "tokens:watch": "chokidar \"figma/variables.*.json\" -c \"npm run tokens:build\"",
     "tokens:css": "node scripts/transform-tokens.mjs"
-    ,"tokens:export": "node scripts/export-w3c-tokens.mjs"
+    ,"tokens:export": "node scripts/export-w3c-tokens.mjs && node scripts/publish-w3c-to-public.mjs"
   },
   "keywords": [],
   "author": "",

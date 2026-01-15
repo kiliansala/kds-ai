@@ -29,7 +29,7 @@ The system operates on a closed-loop pipeline:
 
 ## Tokens (Figma SSOT)
 
-- Los tokens provienen de Figma (`figma/tokens.*.json`) y se consumen a través del artefacto `src/tokens/tokens-data.json`.
+- Los tokens provienen de Figma (`figma/variables.*.json`) y se consumen a través del artefacto `src/tokens/tokens-data.json`.
 - La prioridad de dedupe/alias es Primitive > Semantic > Components y se refleja en `canonicalByKey` y `aliasToCanonical`.
 - El contrato puede listar qué tokens aplica cada componente, pero los valores y alias se resuelven desde `tokens-data.json`.
 

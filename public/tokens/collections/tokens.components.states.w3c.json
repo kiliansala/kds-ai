@@ -1,0 +1,1574 @@
+{
+  "components": {
+    "states": {
+      "primary": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 114, 240, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(173, 198, 255, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 114, 240, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(173, 198, 255, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 114, 240, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(173, 198, 255, 0.16)"
+          }
+        }
+      },
+      "secondary": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(104, 103, 231, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(194, 193, 255, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(104, 103, 231, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(194, 193, 255, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(104, 103, 231, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(194, 193, 255, 0.16)"
+          }
+        }
+      },
+      "on-secondary": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(54, 49, 180, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(54, 49, 180, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(54, 49, 180, 0.16)"
+          }
+        }
+      },
+      "secondary-container": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(226, 223, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(66, 63, 192, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(226, 223, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(66, 63, 192, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(226, 223, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(66, 63, 192, 0.16)"
+          }
+        }
+      },
+      "on-secondary-container": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(226, 223, 255, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(226, 223, 255, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(226, 223, 255, 0.16)"
+          }
+        }
+      },
+      "secondary-fixed": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(226, 223, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(66, 63, 192, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(226, 223, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(66, 63, 192, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(226, 223, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(66, 63, 192, 0.16)"
+          }
+        }
+      },
+      "on-secondary-fixed": {
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.16)"
+          }
+        },
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.08)"
+          }
+        }
+      },
+      "secondary-fixed-dim": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(194, 193, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(194, 193, 255, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(194, 193, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(194, 193, 255, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(194, 193, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(194, 193, 255, 0.16)"
+          }
+        }
+      },
+      "on-secondary-fixed-variant": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(79, 76, 205, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(79, 76, 205, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(79, 76, 205, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(79, 76, 205, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(79, 76, 205, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(79, 76, 205, 0.16)"
+          }
+        }
+      },
+      "tertiary": {
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(141, 46, 188, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(232, 179, 255, 0.16)"
+          }
+        },
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(141, 46, 188, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(232, 179, 255, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(141, 46, 188, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(232, 179, 255, 0.12)"
+          }
+        }
+      },
+      "on-tertiary": {
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(97, 0, 139, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(97, 0, 139, 0.16)"
+          }
+        },
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(97, 0, 139, 0.08)"
+          }
+        }
+      },
+      "tertiary-container": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(107, 47, 69, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(107, 47, 69, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(107, 47, 69, 0.16)"
+          }
+        }
+      },
+      "on-tertiary-container": {
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(49, 0, 72, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.16)"
+          }
+        },
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(49, 0, 72, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(49, 0, 72, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.12)"
+          }
+        }
+      },
+      "tertiary-fixed": {
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.16)"
+          }
+        },
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(246, 217, 255, 0.12)"
+          }
+        }
+      },
+      "on-tertiary-fixed": {
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(49, 0, 72, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(49, 0, 72, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(49, 0, 72, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(49, 0, 72, 0.16)"
+          }
+        },
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(49, 0, 72, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(49, 0, 72, 0.08)"
+          }
+        }
+      },
+      "tertiary-fixed-dim": {
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(232, 179, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(232, 179, 255, 0.16)"
+          }
+        },
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(232, 179, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(232, 179, 255, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(232, 179, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(232, 179, 255, 0.12)"
+          }
+        }
+      },
+      "on-tertiary-fixed-variant": {
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(107, 47, 69, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(107, 47, 69, 0.16)"
+          }
+        },
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(107, 47, 69, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(107, 47, 69, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(107, 47, 69, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(107, 47, 69, 0.12)"
+          }
+        }
+      },
+      "error": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(192, 0, 10, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(255, 180, 170, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(192, 0, 10, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(255, 180, 170, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(192, 0, 10, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(255, 180, 170, 0.16)"
+          }
+        }
+      },
+      "on-error": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(105, 0, 3, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(105, 0, 3, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(105, 0, 3, 0.16)"
+          }
+        }
+      },
+      "error-container": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 218, 213, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(126, 0, 4, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 218, 213, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(126, 0, 4, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 218, 213, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(126, 0, 4, 0.16)"
+          }
+        }
+      },
+      "on-error-container": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(65, 0, 1, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(255, 218, 213, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(65, 0, 1, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(255, 218, 213, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(65, 0, 1, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(255, 218, 213, 0.16)"
+          }
+        }
+      },
+      "on-primary": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 68, 147, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 68, 147, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 68, 147, 0.16)"
+          }
+        }
+      },
+      "primary-container": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(216, 226, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(216, 226, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(216, 226, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.16)"
+          }
+        }
+      },
+      "on-primary-container": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(33, 0, 93, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(216, 226, 255, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(33, 0, 93, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(216, 226, 255, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(33, 0, 93, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(216, 226, 255, 0.16)"
+          }
+        }
+      },
+      "primary-fixed": {
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(216, 226, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(216, 226, 255, 0.12)"
+          }
+        },
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(216, 226, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(216, 226, 255, 0.08)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(216, 226, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(216, 226, 255, 0.16)"
+          }
+        }
+      },
+      "primary-fixed-dim": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(128, 171, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(128, 171, 255, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(128, 171, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(128, 171, 255, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(128, 171, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(128, 171, 255, 0.16)"
+          }
+        }
+      },
+      "on-primary-fixed": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(33, 0, 93, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(33, 0, 93, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(33, 0, 93, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(33, 0, 93, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(33, 0, 93, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(33, 0, 93, 0.16)"
+          }
+        }
+      },
+      "on-primary-fixed-variant": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.08)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.16)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.12)"
+          }
+        }
+      },
+      "outline": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(118, 119, 123, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(144, 144, 149, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(118, 119, 123, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(144, 144, 149, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(118, 119, 123, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(144, 144, 149, 0.16)"
+          }
+        }
+      },
+      "background": {
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(254, 251, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(16, 17, 21, 0.12)"
+          }
+        },
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(254, 251, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(16, 17, 21, 0.08)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(254, 251, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(16, 17, 21, 0.16)"
+          }
+        }
+      },
+      "on-background": {
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.16)"
+          }
+        },
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.12)"
+          }
+        }
+      },
+      "surface": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(254, 251, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(16, 17, 21, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(254, 251, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(20, 18, 24, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(254, 251, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(16, 17, 21, 0.16)"
+          }
+        }
+      },
+      "on-surface": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.16)"
+          }
+        }
+      },
+      "surface-variant": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(70, 70, 75, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(70, 70, 75, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(70, 70, 75, 0.16)"
+          }
+        }
+      },
+      "on-surface-variant": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(70, 70, 75, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(198, 198, 203, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(70, 70, 75, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(198, 198, 203, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(70, 70, 75, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(198, 198, 203, 0.16)"
+          }
+        }
+      },
+      "inverse-surface": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(58, 59, 63, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.08)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(58, 59, 63, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.16)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(58, 59, 63, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.12)"
+          }
+        }
+      },
+      "inverse-on-surface": {
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(241, 240, 245, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(58, 59, 63, 0.16)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(241, 240, 245, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(58, 59, 63, 0.12)"
+          }
+        },
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(241, 240, 245, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(58, 59, 63, 0.08)"
+          }
+        }
+      },
+      "inverse-primary": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(173, 198, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(173, 198, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(173, 198, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.16)"
+          }
+        }
+      },
+      "shadow": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.16)"
+          }
+        }
+      },
+      "surface-tint": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(173, 198, 255, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(173, 198, 255, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 91, 193, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(173, 198, 255, 0.16)"
+          }
+        }
+      },
+      "outline-variant": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(198, 198, 203, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(70, 70, 75, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(198, 198, 203, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(70, 70, 75, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(198, 198, 203, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(70, 70, 75, 0.16)"
+          }
+        }
+      },
+      "scrim": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.16)"
+          }
+        }
+      },
+      "surface-container-highest": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(58, 59, 63, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(58, 59, 63, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(58, 59, 63, 0.16)"
+          }
+        }
+      },
+      "surface-container-high": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(47, 48, 52, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(47, 48, 52, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(227, 226, 231, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(47, 48, 52, 0.16)"
+          }
+        }
+      },
+      "surface-container": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(241, 240, 245, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(36, 38, 42, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(241, 240, 245, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(36, 38, 42, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(241, 240, 245, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(36, 38, 42, 0.16)"
+          }
+        }
+      },
+      "surface-container-low": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(241, 240, 245, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(241, 240, 245, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(241, 240, 245, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(26, 27, 31, 0.16)"
+          }
+        }
+      },
+      "surface-container-lowest": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(0, 0, 0, 0.16)"
+          }
+        }
+      },
+      "surface-bright": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(254, 251, 255, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(58, 59, 63, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(254, 251, 255, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(58, 59, 63, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(254, 251, 255, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(58, 59, 63, 0.16)"
+          }
+        }
+      },
+      "surface-dim": {
+        "opacity-08": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(198, 198, 203, 0.08)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(16, 17, 21, 0.08)"
+          }
+        },
+        "opacity-12": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(198, 198, 203, 0.12)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(16, 17, 21, 0.12)"
+          }
+        },
+        "opacity-16": {
+          "light": {
+            "$type": "color",
+            "$value": "rgba(198, 198, 203, 0.16)"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "rgba(16, 17, 21, 0.16)"
+          }
+        }
+      }
+    }
+  }
+}

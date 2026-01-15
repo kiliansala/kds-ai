@@ -2,9 +2,9 @@ import fs from 'fs';
 import path from 'path';
 
 const FILES = [
-  'figma/tokens.primitive.json',
-  'figma/tokens.semantic.json',
-  'figma/tokens.components.json'
+  'figma/variables.primitive.json',
+  'figma/variables.semantic.json',
+  'figma/variables.components.json'
 ];
 
 /**
@@ -103,69 +103,26 @@ async function transform() {
     const modeId = collection.defaultModeId || collection.modes[0].modeId;
     let value = resolveValue(variable, allVariables, modeId);
     
-    let normalizedName = variable.name.toLowerCase().replace(/[\/\s]/g, '-');
-    let cssName = '';
-    const collectionName = collection.name.toLowerCase();
+    const normalizePath = (name) => name
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/\//g, '.')
+      .replace(/[^a-z0-9.\-]/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/\.-/g, '.')
+      .replace(/-\./g, '.');
 
-    // 2a. Determine base name by collection
-    if (collectionName === 'key' || collectionName === 'colors') {
-      cssName = `--kds-sys-color-${normalizedName}`;
-    } else if (collectionName === 'typography' || collectionName === 'typescale') {
-      cssName = `--kds-typography-${normalizedName}`;
-    } else if (collectionName === 'space') {
-      cssName = `--kds-sys-space-${normalizedName}`;
-    } else if (collectionName === 'components') {
-      cssName = `--kds-comp-${normalizedName}`;
-    } else if (collectionName === 'states') {
-      cssName = `--kds-state-${normalizedName}`;
-    } else {
-      cssName = `--kds-${collectionName}-${normalizedName}`;
-    }
+    const normalizedPath = normalizePath(variable.name);
+    const normalizedCollection = normalizePath(collection.name || '');
 
-    // 2b. Manual overrides (ONLY for non-component/non-state tokens to match external contracts)
-    const isComponentSource = sourceFile === 'tokens.components.json';
-    const isComponentColl = collectionName === 'components';
-    const isStateColl = collectionName === 'states';
-
-    const extractAlpha = (val) => {
-        if (typeof val !== 'string') return val;
-        const match = val.match(/rgba\(.*,\s*([\d.]+)\)/);
-        return match ? match[1] : val;
-    };
-
-    // If it's a component-related token from the component source, preserve it strictly
-    if (isComponentSource && (isComponentColl || isStateColl)) {
-        cssName = `--kds-comp-${normalizedName}`;
-        if (normalizedName.includes('opacity')) {
-            value = extractAlpha(value);
-        }
-    } else if (collectionName !== 'components') {
-        // Global system overrides
-        if (normalizedName === 'primary') cssName = '--kds-sys-color-primary';
-        if (normalizedName === 'on-primary') cssName = '--kds-sys-color-on-primary';
-        if (normalizedName === 'secondary-container') cssName = '--kds-sys-color-secondary-container';
-        if (normalizedName === 'on-surface-variant') cssName = '--kds-sys-color-on-surface-variant';
-        
-        if (normalizedName.includes('hover') && normalizedName.includes('opacity')) {
-          cssName = '--kds-state-layer-opacity-hover';
-          value = extractAlpha(value);
-        } else if (normalizedName.includes('focus') && normalizedName.includes('opacity')) {
-          cssName = '--kds-state-layer-opacity-focus';
-          value = extractAlpha(value);
-        } else if (normalizedName.includes('press') && normalizedName.includes('opacity')) {
-          cssName = '--kds-state-layer-opacity-press';
-          value = extractAlpha(value);
-        } else if (normalizedName.endsWith('opacity-08')) {
-          cssName = '--kds-state-layer-opacity-hover';
-          value = extractAlpha(value);
-        } else if (normalizedName.endsWith('opacity-12')) {
-          cssName = '--kds-state-layer-opacity-focus';
-          value = extractAlpha(value);
-        } else if (normalizedName.endsWith('opacity-16')) {
-          cssName = '--kds-state-layer-opacity-press';
-          value = extractAlpha(value);
-        }
-    }
+    const levelPrefix = sourceFile.includes('primitive')
+      ? '--kds-pri.'
+      : sourceFile.includes('semantic')
+        ? '--kds-sem.'
+        : '--kds-comp.';
+    const cssName = normalizedCollection
+      ? `${levelPrefix}${normalizedCollection}.${normalizedPath}`
+      : `${levelPrefix}${normalizedPath}`;
 
     if (!processedNames.has(cssName)) {
       css += `  ${cssName}: ${value};\n`;

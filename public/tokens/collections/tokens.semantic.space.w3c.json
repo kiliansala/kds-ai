@@ -1,0 +1,120 @@
+{
+  "semantic": {
+    "space": {
+      "row": {
+        "height": {
+          "$type": "number",
+          "$value": "{primitive.space.space-40}"
+        }
+      },
+      "canvas": {
+        "small": {
+          "$type": "number",
+          "$value": 480
+        },
+        "regular-content": {
+          "$type": "number",
+          "$value": 592
+        },
+        "regular": {
+          "$type": "number",
+          "$value": 640
+        },
+        "big": {
+          "$type": "number",
+          "$value": 960
+        },
+        "full": {
+          "$type": "number",
+          "$value": 1920
+        },
+        "padding-vertical": {
+          "$type": "number",
+          "$value": "{primitive.space.space-16}"
+        },
+        "padding-vertical-title": {
+          "$type": "number",
+          "$value": "{primitive.space.space-8}"
+        },
+        "gap-vertical": {
+          "$type": "number",
+          "$value": "{primitive.space.space-8}"
+        }
+      },
+      "group": {
+        "padding-horizontal": {
+          "$type": "number",
+          "$value": "{primitive.space.space-0}"
+        },
+        "gap-horizontal": {
+          "$type": "number",
+          "$value": "{primitive.space.space-8}"
+        }
+      },
+      "bar": {
+        "padding-horizontal": {
+          "$type": "number",
+          "$value": "{primitive.space.space-16}"
+        },
+        "gap-horizontal": {
+          "$type": "number",
+          "$value": "{primitive.space.space-16}"
+        }
+      },
+      "cell": {
+        "padding-horizontal": {
+          "$type": "number",
+          "$value": "{primitive.space.space-16}"
+        },
+        "padding-vertical": {
+          "$type": "number",
+          "$value": "{primitive.space.space-8}"
+        },
+        "gap-horizontal": {
+          "$type": "number",
+          "$value": "{primitive.space.space-8}"
+        }
+      },
+      "form-row": {
+        "padding-horizontal": {
+          "$type": "number",
+          "$value": "{primitive.space.space-24}"
+        },
+        "gap-horizontal": {
+          "$type": "number",
+          "$value": "{primitive.space.space-16}"
+        }
+      },
+      "form-stack": {
+        "padding-vertical": {
+          "$type": "number",
+          "$value": "{primitive.space.space-8}"
+        },
+        "gap-vertical": {
+          "$type": "number",
+          "$value": "{primitive.space.space-8}"
+        }
+      },
+      "space-0": {
+        "$type": "number",
+        "$value": "{primitive.space.space-0}"
+      },
+      "space-8": {
+        "$type": "number",
+        "$value": "{primitive.space.space-8}"
+      },
+      "space-16": {
+        "$type": "number",
+        "$value": "{primitive.space.space-16}"
+      },
+      "space-24": {
+        "$type": "number",
+        "$value": "{primitive.space.space-24}"
+      },
+      "space-40": {
+        "$type": "number",
+        "$value": "{primitive.space.space-40}"
+      }
+    }
+  }
+}
