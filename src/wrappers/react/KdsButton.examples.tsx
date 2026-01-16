@@ -1,15 +1,15 @@
 /**
  * KdsButton React Wrapper - Usage Examples
  * 
- * Demonstrates full API parity with Button Web Component v1.0.0
- * All 7 properties, 1 event, and 2 slots are fully supported
+ * Demonstrates strict API parity with Button Web Component v1.0.0
+ * Exactly 7 properties, 1 event, and 2 slots - no wrapper-only props
  */
 
 import React, { useRef } from 'react';
 import KdsButton from './KdsButton';
 
 // ============================================================
-// EXAMPLE 1: Basic Button with Text Content
+// EXAMPLE 1: Basic Button with Text Content (Default Slot)
 // ============================================================
 export function BasicButtonExample() {
   return (
@@ -21,7 +21,7 @@ export function BasicButtonExample() {
         Click Me
       </KdsButton>
       
-      {/* All appearances */}
+      {/* All 5 appearances (WC API) */}
       <KdsButton appearance="outlined">
         Outlined
       </KdsButton>
@@ -42,16 +42,14 @@ export function BasicButtonExample() {
 }
 
 // ============================================================
-// EXAMPLE 2: Button with Icon Support
+// EXAMPLE 2: Button with Material Symbols Icon
 // ============================================================
-export function ButtonWithIconExample() {
+export function ButtonWithMaterialIconExample() {
   return (
     <div>
-      <h3>Button with Icon</h3>
+      <h3>Button with Material Symbols Icon</h3>
       
-      {/* Material Symbols icon with hasIcon + icon properties */}
-      {/* When hasIcon=true, the button shows the icon in a special icon slot */}
-      {/* The 'icon' property specifies which Material Symbols icon to display */}
+      {/* When hasIcon=true, icon property specifies which Material Symbols to show */}
       <KdsButton
         hasIcon={true}
         icon="add"
@@ -60,38 +58,59 @@ export function ButtonWithIconExample() {
         Add Item
       </KdsButton>
       
-      {/* Icon-only button */}
+      {/* Icon-only button (no default slot content) */}
       <KdsButton
         hasIcon={true}
         icon="delete"
         appearance="outlined"
       />
       
-      {/* Custom icon via iconSlot JSX */}
-      {/* This overrides the Material Symbols icon */}
-      <KdsButton
-        appearance="tonal"
-        iconSlot={<span>🎨</span>}
-      >
-        Custom Icon
+      {/* Different icons */}
+      <KdsButton hasIcon={true} icon="check" appearance="tonal">
+        Done
       </KdsButton>
       
-      {/* Custom SVG icon via iconSlot */}
-      <KdsButton
-        iconSlot={
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-          </svg>
-        }
-      >
-        Done
+      <KdsButton hasIcon={true} icon="settings" appearance="elevated">
+        Settings
       </KdsButton>
     </div>
   );
 }
 
 // ============================================================
-// EXAMPLE 3: Button States
+// EXAMPLE 3: Button with Custom Icon Slot Content
+// ============================================================
+export function ButtonWithCustomIconSlotExample() {
+  return (
+    <div>
+      <h3>Button with Custom Icon Slot</h3>
+      
+      {/* Use standard Web Component slot semantics: slot="icon" */}
+      {/* This overrides the Material Symbols icon from the icon property */}
+      <KdsButton appearance="tonal">
+        <span slot="icon">🎨</span>
+        Design
+      </KdsButton>
+      
+      {/* SVG icon via slot */}
+      <KdsButton appearance="filled">
+        <svg slot="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+        Done
+      </KdsButton>
+      
+      {/* Custom component as icon */}
+      <KdsButton appearance="outlined">
+        <span slot="icon" style={{fontSize: '20px'}}>⭐</span>
+        Favorite
+      </KdsButton>
+    </div>
+  );
+}
+
+// ============================================================
+// EXAMPLE 4: Button States (5 State Variants)
 // ============================================================
 export function ButtonStatesExample() {
   return (
@@ -127,7 +146,7 @@ export function ButtonStatesExample() {
 }
 
 // ============================================================
-// EXAMPLE 4: Button Types (form submission)
+// EXAMPLE 5: Form Button Types (type Property)
 // ============================================================
 export function FormButtonsExample() {
   const handleSubmit = (e: React.FormEvent) => {
@@ -137,7 +156,7 @@ export function FormButtonsExample() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h3>Form Buttons</h3>
+      <h3>Form Buttons (type Property)</h3>
       
       {/* type="button" - default, no form interaction */}
       <KdsButton type="button">
@@ -158,14 +177,14 @@ export function FormButtonsExample() {
 }
 
 // ============================================================
-// EXAMPLE 5: Link Button via href
+// EXAMPLE 6: Link Button (href Property)
 // ============================================================
 export function LinkButtonExample() {
   return (
     <div>
-      <h3>Link Button</h3>
+      <h3>Link Button (href Property)</h3>
       
-      {/* When href is provided, the button becomes an <a> tag internally */}
+      {/* When href is provided, the WC renders as <a> tag internally */}
       {/* This is semantic HTML and works with keyboard navigation */}
       <KdsButton href="https://example.com" appearance="filled">
         Go to Example
@@ -175,7 +194,7 @@ export function LinkButtonExample() {
         Read Documentation
       </KdsButton>
       
-      {/* Link with icon */}
+      {/* Link with Material Symbols icon */}
       <KdsButton
         href="/settings"
         hasIcon={true}
@@ -184,12 +203,18 @@ export function LinkButtonExample() {
       >
         Settings
       </KdsButton>
+      
+      {/* Link with custom icon slot */}
+      <KdsButton href="/help" appearance="outlined">
+        <span slot="icon">❓</span>
+        Help
+      </KdsButton>
     </div>
   );
 }
 
 // ============================================================
-// EXAMPLE 6: Event Handling (kds-click Event)
+// EXAMPLE 7: Event Handling (kds-click Event)
 // ============================================================
 export function EventHandlingExample() {
   const [clickCount, setClickCount] = React.useState(0);
@@ -202,7 +227,7 @@ export function EventHandlingExample() {
 
   return (
     <div>
-      <h3>Event Handling</h3>
+      <h3>Event Handling (onKdsClick)</h3>
       
       <KdsButton
         onKdsClick={handleKdsClick}
@@ -218,7 +243,7 @@ export function EventHandlingExample() {
 }
 
 // ============================================================
-// EXAMPLE 7: Ref Forwarding
+// EXAMPLE 8: Ref Forwarding
 // ============================================================
 export function RefForwardingExample() {
   const buttonRef = useRef<HTMLElement>(null);
@@ -256,7 +281,7 @@ export function RefForwardingExample() {
 }
 
 // ============================================================
-// EXAMPLE 8: Complex Button with All Features
+// EXAMPLE 9: Complex Example with All 7 Properties
 // ============================================================
 export function ComplexButtonExample() {
   const [disabled, setDisabled] = React.useState(false);
@@ -269,7 +294,7 @@ export function ComplexButtonExample() {
 
   return (
     <div>
-      <h3>Complex Button Example</h3>
+      <h3>Complex Example (All 7 Properties)</h3>
       
       <div style={{ marginBottom: '20px' }}>
         <label>
@@ -278,7 +303,7 @@ export function ComplexButtonExample() {
             checked={disabled}
             onChange={(e) => setDisabled(e.target.checked)}
           />
-          Disabled
+          Disabled (state property)
         </label>
         
         <label>
@@ -287,7 +312,7 @@ export function ComplexButtonExample() {
             checked={hasIcon}
             onChange={(e) => setHasIcon(e.target.checked)}
           />
-          Show Icon
+          Show Icon (hasIcon property)
         </label>
         
         <select value={appearance} onChange={(e) => setAppearance(e.target.value as any)}>
@@ -299,53 +324,54 @@ export function ComplexButtonExample() {
         </select>
       </div>
       
-      {/* Button with all configurable properties */}
+      {/* Button with all 7 WC properties configured */}
       <KdsButton
         appearance={appearance}
         state={disabled ? 'disabled' : 'enabled'}
         hasIcon={hasIcon}
         icon="check"
-        label="Dynamic Button"
+        label="Confirm"
         type="button"
         onKdsClick={handleKdsClick}
       >
-        {hasIcon ? 'Confirmed' : 'Click'}
+        {hasIcon && <span slot="icon">✓</span>}
+        Dynamic Button
       </KdsButton>
     </div>
   );
 }
 
 // ============================================================
-// EXAMPLE 9: Accessibility Features
+// EXAMPLE 10: Accessibility with Standard HTML Attributes
 // ============================================================
 export function AccessibilityExample() {
   return (
     <div>
       <h3>Accessibility Features</h3>
       
-      {/* Disabled buttons are properly marked with aria-disabled */}
-      <KdsButton state="disabled" aria-label="Save document (currently disabled)">
+      {/* Disabled state is marked automatically with aria-disabled by WC */}
+      <KdsButton state="disabled" title="Save document (currently disabled)">
         Save
       </KdsButton>
       
-      {/* Buttons support aria-label for custom labels */}
-      <KdsButton aria-label="Delete the selected item" appearance="outlined">
+      {/* Standard HTML title attribute */}
+      <KdsButton appearance="outlined" title="Delete the selected item">
         Delete
       </KdsButton>
       
-      {/* Icon buttons should have aria-label to describe their purpose */}
+      {/* Icon-only button with title for context */}
       <KdsButton
         hasIcon={true}
         icon="info"
-        aria-label="Show more information"
+        title="Show more information"
       />
       
-      {/* Links with href support keyboard navigation */}
+      {/* Link button with title */}
       <KdsButton
         href="/help"
         hasIcon={true}
         icon="help"
-        aria-label="Open help documentation"
+        title="Open help documentation"
       >
         Help
       </KdsButton>
@@ -354,23 +380,31 @@ export function AccessibilityExample() {
 }
 
 // ============================================================
-// EXAMPLE 10: Properties Mapping (WC → React)
+// API Parity Reference (7 Properties, 1 Event, 2 Slots)
 // ============================================================
 /**
- * API Parity Reference - How WC properties map to React props:
+ * STRICT PARITY WITH WEB COMPONENT v1.0.0
  * 
- * Web Component Property  →  React Prop          →  Type
- * ────────────────────────────────────────────────────────
- * appearance              →  appearance          →  'filled' | 'outlined' | 'text' | 'tonal' | 'elevated'
- * state                   →  state               →  'enabled' | 'disabled' | 'hovered' | 'focused' | 'pressed'
- * hasIcon                 →  hasIcon             →  boolean
- * label                   →  label               →  string
- * icon                    →  icon                →  string (Material Symbols icon name)
- * href                    →  href                →  string (makes button render as <a> tag)
- * type                    →  type                →  'button' | 'submit' | 'reset'
- * [custom event]          →  onKdsClick          →  (e: CustomEvent) => void
- * [default slot]          →  children            →  ReactNode (button text)
- * [icon slot]             →  iconSlot            →  ReactNode (custom icon override)
+ * React Wrapper Props (exactly 7 WC properties):
+ * ─────────────────────────────────────────────
+ * 1. appearance:  'filled' | 'outlined' | 'text' | 'tonal' | 'elevated'
+ * 2. state:       'enabled' | 'disabled' | 'hovered' | 'focused' | 'pressed'
+ * 3. hasIcon:     boolean
+ * 4. label:       string
+ * 5. icon:        string (Material Symbols name)
+ * 6. href:        string (optional, makes button render as <a>)
+ * 7. type:        'button' | 'submit' | 'reset'
  * 
- * All 7 properties + 1 event + 2 slots = 10/10 API parity ✓
+ * Event Handler:
+ * ──────────────
+ * onKdsClick:     (e: CustomEvent) => void
+ * 
+ * Slots (standard Web Component semantics):
+ * ─────────────────────────────────────────
+ * 1. default slot:   children (button text content)
+ * 2. icon slot:      <span slot="icon">...</span> (custom icon)
+ *
+ * NO WRAPPER-ONLY PROPS (removed: iconSlot)
+ * 
+ * ✓ 7 properties + 1 event + 2 slots = 10/10 API parity
  */
