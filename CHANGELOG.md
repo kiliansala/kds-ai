@@ -54,7 +54,7 @@ See separate release tags below for component-specific releases.
 - Event emission tests
 
 #### Standards & Guarantees
-- **API Stability:** Stable - no breaking changes expected
+- **API Stability:** Stable — breaking changes only in major versions
 - **Accessibility:** WCAG 2.1 Level AA compliant
   - Tab navigation and keyboard activation
   - Clear focus indicators
@@ -138,3 +138,4 @@ No migration needed. Initial stable release. All wrappers provide thin adapters 
 
 [Unreleased]: https://github.com/kiliansala/kds-ai/compare/button-wrappers-v1.0.0...HEAD
 [1.0.0]: https://github.com/kiliansala/kds-ai/releases/tag/button-wrappers-v1.0.0
+<!-- Global release reference. Component-specific tags listed above. -->
