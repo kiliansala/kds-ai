@@ -21,6 +21,8 @@ Verification:
 - Confirm `public/tokens/` updated as expected.
 - Provide a short diff summary (counts/size, no full dumps).
 
-Optional (only if explicitly requested):
-- CSS generation: `npm run tokens:css`
-- Docs generation: `npm run tokens:build`
+Next steps (MANDATORY to complete the token lifecycle):
+1) Run `npm run tokens:css` to update CSS variables for dev-app visualization.
+2) Run `npm run tokens:build` to update human-readable token documentation.
+
+The token change is NOT considered complete until all steps above succeed.
