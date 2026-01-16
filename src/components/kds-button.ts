@@ -91,6 +91,21 @@ export class KdsButton extends HTMLElement {
     const href = this.href;
     const isLink = Boolean(href);
 
+    // Compute token values from root CSS variables
+    const getComputedToken = (cssVar: string, fallback: string) => {
+      const value = getComputedStyle(document.documentElement).getPropertyValue(cssVar).trim();
+      return value || fallback;
+    };
+
+    const primaryLight = getComputedToken('--kds-components.components.primary.light', '#1484FF');
+    const onPrimaryLight = getComputedToken('--kds-components.components.on-primary.light', '#FFFFFF');
+    const hoverLight = getComputedToken('--kds-components.components.hover.light', '#1673E8');
+    const secondaryContainerLight = getComputedToken('--kds-components.components.secondary-container.light', '#ADACEB');
+    const onSecondaryContainerLight = getComputedToken('--kds-components.components.on-secondary-container.light', '#1B1A6A');
+    const surfaceContainerLowLight = getComputedToken('--kds-components.components.surface-container-low.light', '#F2F2F2');
+    const onSurfaceVariantLight = getComputedToken('--kds-components.components.on-surface-variant.light', '#49454F');
+    const outlineVariantLight = getComputedToken('--kds-components.components.outline-variant.light', '#C1C1C4');
+
     // Use default 'md' size styles hardcoded since 'size' prop is removed from Figma
     const style = `
       <style>
@@ -128,8 +143,8 @@ export class KdsButton extends HTMLElement {
         
         /* Styles */
         .kds-btn--filled {
-          background-color: var(--kds-comp-primary);
-          color: var(--kds-comp-on-primary);
+          background-color: ${primaryLight};
+          color: ${onPrimaryLight};
         }
         
         /* Interaction Layer (Figma State mapping) */
@@ -145,57 +160,118 @@ export class KdsButton extends HTMLElement {
 
         .kds-btn:hover::after,
         .kds-btn--hovered::after {
-            opacity: var(--kds-comp-primary-opacity-08, 0.08);
+            opacity: 0.08;
         }
         
         .kds-btn:focus-visible::after,
         .kds-btn--focused::after {
-            opacity: var(--kds-comp-primary-opacity-12, 0.12);
+            opacity: 0.12;
         }
         .kds-btn:focus-visible,
         .kds-btn--focused {
-          outline: 2px solid var(--kds-comp-outline-variant, currentColor);
+          outline: 2px solid ${outlineVariantLight};
           outline-offset: 2px;
         }
 
         .kds-btn:active::after,
         .kds-btn--pressed::after {
-            opacity: var(--kds-comp-primary-opacity-16, 0.16);
+            opacity: 0.16;
         }
 
         .kds-btn--filled:hover,
         .kds-btn--filled.kds-btn--hovered {
           box-shadow: 0 1px 3px 1px rgba(0,0,0,0.15); 
+          background-color: ${hoverLight};
         }
 
         .kds-btn--outlined {
           background-color: transparent;
-          border-color: var(--kds-comp-primary);
-          color: var(--kds-comp-primary);
+          border-color: ${primaryLight};
+          color: ${primaryLight};
           border-width: 1px;
+        }
+
+        .kds-btn--outlined:hover::after,
+        .kds-btn--outlined.kds-btn--hovered::after {
+          opacity: 0.08;
+        }
+
+        .kds-btn--outlined.kds-btn--disabled {
+          border-color: ${onSurfaceVariantLight};
+          opacity: 0.5;
         }
         
         .kds-btn--text {
             background-color: transparent;
-            color: var(--kds-comp-primary);
+            color: ${primaryLight};
             padding: 0 12px;
+        }
+
+        .kds-btn--text:hover::after,
+        .kds-btn--text.kds-btn--hovered::after {
+          opacity: 0.08;
+          background-color: ${primaryLight};
+        }
+
+        .kds-btn--text:focus-visible::after,
+        .kds-btn--text.kds-btn--focused::after {
+          opacity: 0.12;
+          background-color: ${primaryLight};
+        }
+
+        .kds-btn--text:active::after,
+        .kds-btn--text.kds-btn--pressed::after {
+          opacity: 0.16;
+          background-color: ${primaryLight};
         }
         
         .kds-btn--tonal {
-            background-color: var(--kds-comp-secondary-container);
-            color: var(--kds-comp-on-secondary-container);
+            background-color: ${secondaryContainerLight};
+            color: ${onSecondaryContainerLight};
+        }
+
+        .kds-btn--tonal:hover::after,
+        .kds-btn--tonal.kds-btn--hovered::after {
+          opacity: 0.08;
+        }
+
+        .kds-btn--tonal:focus-visible::after,
+        .kds-btn--tonal.kds-btn--focused::after {
+          opacity: 0.12;
+        }
+
+        .kds-btn--tonal:active::after,
+        .kds-btn--tonal.kds-btn--pressed::after {
+          opacity: 0.16;
         }
         
         .kds-btn--elevated {
-            background-color: var(--kds-comp-surface-container-low);
-            color: var(--kds-comp-primary);
+            background-color: ${surfaceContainerLowLight};
+            color: ${primaryLight};
             box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .kds-btn--elevated:hover::after,
+        .kds-btn--elevated.kds-btn--hovered::after {
+          opacity: 0.08;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+
+        .kds-btn--elevated:focus-visible::after,
+        .kds-btn--elevated.kds-btn--focused::after {
+          opacity: 0.12;
+        }
+
+        .kds-btn--elevated:active::after,
+        .kds-btn--elevated.kds-btn--pressed::after {
+          opacity: 0.16;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.35);
         }
 
         /* States (Disabled) */
         .kds-btn--disabled {
-          background-color: var(--kds-comp-surface-container-low);
-          color: var(--kds-comp-on-surface-variant);
+          background-color: ${surfaceContainerLowLight};
+          color: ${onSurfaceVariantLight};
           cursor: not-allowed;
           box-shadow: none !important;
           pointer-events: none;
@@ -206,12 +282,6 @@ export class KdsButton extends HTMLElement {
         .material-symbols-outlined {
             font-size: 18px;
             line-height: 1;
-            /* Font family is loaded globally in index.html, but we need to ensure it applies in Shadow DOM.
-               The best way in Shadow DOM is to import it or assume inheritance if variables are used, 
-               but for font-face it's tricky. 
-               For this prototype, we'll try to rely on the fact that Google Fonts usually injects @font-face 
-               accessible. If not, we might need a @import in this style block.
-            */
         }
       </style>
       <!-- We need to import the font style inside Shadow DOM or use a constructed stylesheet -->
