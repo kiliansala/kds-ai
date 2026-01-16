@@ -1370,6 +1370,67 @@ const renderComponent = (tag: string) => {
 
       ${renderVisualMatrix(component)}
 
+      ${component.tag === 'kds-button' ? `
+        <h2 style="margin-top: 3rem;">Usage Examples</h2>
+        <p style="color: #666; margin-bottom: 1.5rem;">Common patterns for using the Button component.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+          <!-- Example 1: Basic Button -->
+          <div style="border: 1px solid #eee; border-radius: 8px; padding: 1.5rem; background: #fafafa;">
+            <h4 style="margin: 0 0 1rem; color: #333;">Basic Filled Button</h4>
+            <div style="margin-bottom: 1rem; padding: 1.5rem; background: white; border-radius: 4px; display: flex; justify-content: center;">
+              <kds-button label="Click me" appearance="filled"></kds-button>
+            </div>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 0; font-size: 0.85em; overflow-x: auto;"><code>&lt;kds-button label="Click me" appearance="filled"&gt;&lt;/kds-button&gt;</code></pre>
+          </div>
+
+          <!-- Example 2: Button with Icon -->
+          <div style="border: 1px solid #eee; border-radius: 8px; padding: 1.5rem; background: #fafafa;">
+            <h4 style="margin: 0 0 1rem; color: #333;">Button with Icon</h4>
+            <div style="margin-bottom: 1rem; padding: 1.5rem; background: white; border-radius: 4px; display: flex; justify-content: center;">
+              <kds-button label="Search" appearance="filled" has-icon icon="search"></kds-button>
+            </div>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 0; font-size: 0.85em; overflow-x: auto;"><code>&lt;kds-button label="Search" has-icon icon="search"&gt;&lt;/kds-button&gt;</code></pre>
+          </div>
+
+          <!-- Example 3: Outlined Button -->
+          <div style="border: 1px solid #eee; border-radius: 8px; padding: 1.5rem; background: #fafafa;">
+            <h4 style="margin: 0 0 1rem; color: #333;">Outlined Variant</h4>
+            <div style="margin-bottom: 1rem; padding: 1.5rem; background: white; border-radius: 4px; display: flex; justify-content: center;">
+              <kds-button label="Cancel" appearance="outlined"></kds-button>
+            </div>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 0; font-size: 0.85em; overflow-x: auto;"><code>&lt;kds-button label="Cancel" appearance="outlined"&gt;&lt;/kds-button&gt;</code></pre>
+          </div>
+
+          <!-- Example 4: Text Button -->
+          <div style="border: 1px solid #eee; border-radius: 8px; padding: 1.5rem; background: #fafafa;">
+            <h4 style="margin: 0 0 1rem; color: #333;">Text Variant</h4>
+            <div style="margin-bottom: 1rem; padding: 1.5rem; background: white; border-radius: 4px; display: flex; justify-content: center;">
+              <kds-button label="Learn more" appearance="text"></kds-button>
+            </div>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 0; font-size: 0.85em; overflow-x: auto;"><code>&lt;kds-button label="Learn more" appearance="text"&gt;&lt;/kds-button&gt;</code></pre>
+          </div>
+
+          <!-- Example 5: Disabled Button -->
+          <div style="border: 1px solid #eee; border-radius: 8px; padding: 1.5rem; background: #fafafa;">
+            <h4 style="margin: 0 0 1rem; color: #333;">Disabled State</h4>
+            <div style="margin-bottom: 1rem; padding: 1.5rem; background: white; border-radius: 4px; display: flex; justify-content: center;">
+              <kds-button label="Save" appearance="filled" state="disabled"></kds-button>
+            </div>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 0; font-size: 0.85em; overflow-x: auto;"><code>&lt;kds-button label="Save" state="disabled"&gt;&lt;/kds-button&gt;</code></pre>
+          </div>
+
+          <!-- Example 6: Link Button -->
+          <div style="border: 1px solid #eee; border-radius: 8px; padding: 1.5rem; background: #fafafa;">
+            <h4 style="margin: 0 0 1rem; color: #333;">Link Button</h4>
+            <div style="margin-bottom: 1rem; padding: 1.5rem; background: white; border-radius: 4px; display: flex; justify-content: center;">
+              <kds-button label="Visit site" appearance="outlined" href="https://example.com"></kds-button>
+            </div>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 0; font-size: 0.85em; overflow-x: auto;"><code>&lt;kds-button label="Visit site" href="https://example.com"&gt;&lt;/kds-button&gt;</code></pre>
+          </div>
+        </div>
+      ` : ''}
+
       ${component.events && component.events.length > 0 ? `
         <h2 style="margin-top: 3rem;">Events</h2>
         <table class="api-table">
