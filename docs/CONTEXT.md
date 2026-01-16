@@ -102,6 +102,20 @@ documentation, and validation) operates exclusively on committed snapshot data.
   - redefine styling
   - bypass tokens
 
+Wrappers MUST maintain **strict API parity** with the canonical Web Component:
+
+- Same properties (no aliases, no renaming)
+- Same events (same names and payload semantics)
+- Same slots (standard Web Component slot semantics)
+
+Wrappers MUST NOT:
+- Add wrapper-only inputs or parameters
+- Provide convenience APIs not present in the Web Component
+- Reinterpret events or state handling
+
+If a wrapper diverges from the canonical API, it is considered **out of sync**
+and must be corrected before release.
+
 ---
 
 ## 6. Token Strategy
@@ -136,6 +150,30 @@ baseline pattern for all future components.
 
 ---
 
+## X. Component Lifecycle (Mandatory)
+
+All components in KDS-AI MUST follow the same lifecycle:
+
+1. **WIP**
+2. **FEATURE-COMPLETE**
+3. **VISUAL-LOCK**
+4. **RC (Release Candidate)**
+5. **v1.0 DONE**
+
+Each lifecycle transition:
+- Has explicit acceptance criteria
+- Is executed and validated via prompts
+- Produces verifiable artifacts (code, docs, commits, tags)
+
+No component may:
+- Skip lifecycle stages
+- Be released without completing the full lifecycle
+- Introduce breaking changes after VISUAL-LOCK
+
+The Button component v1.0.0 is the reference implementation of this lifecycle.
+
+---
+
 ## 8. Tooling Rules
 
 - Tooling must support:
@@ -149,6 +187,20 @@ baseline pattern for all future components.
 
 - Scripts are preferred over manual workflows
 - Local development tooling must not redefine system rules
+
+### Dev Application
+
+- The dev-app is the **visual validation ground truth**
+- If a component cannot be:
+  - rendered
+  - inspected
+  - interacted with
+  in the dev-app, it is not considered complete
+
+The dev-app temporarily replaces Storybook for:
+- documentation
+- visual validation
+- manual testing
 
 ---
 
