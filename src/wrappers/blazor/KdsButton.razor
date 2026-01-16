@@ -1,6 +1,188 @@
 @using Microsoft.AspNetCore.Components
 @using Microsoft.AspNetCore.Components.Web
 
+@* 
+  KdsButton.razor - Blazor Wrapper for Button Web Component v1.0.0
+  
+  STRICT API PARITY: This component wraps the canonical Web Component with
+  exactly 7 parameters (no extras), 1 event (kds-click), and 2 slots (default + icon).
+  
+  ===========================================================================
+  USAGE EXAMPLES
+  ===========================================================================
+  
+  EXAMPLE 1: Basic button with all 5 appearances
+  ───────────────────────────────────────────────
+  <KdsButton Appearance="filled">
+    Click Me
+  </KdsButton>
+  
+  <KdsButton Appearance="outlined">
+    Outlined
+  </KdsButton>
+  
+  <KdsButton Appearance="text">
+    Text
+  </KdsButton>
+  
+  <KdsButton Appearance="tonal">
+    Tonal
+  </KdsButton>
+  
+  <KdsButton Appearance="elevated">
+    Elevated
+  </KdsButton>
+  
+  ─────────────────────────────────────────────────────────────────────────
+  
+  EXAMPLE 2: Icon support via Material Symbols
+  ──────────────────────────────────────────────
+  <KdsButton HasIcon="true" Icon="add" Appearance="filled">
+    Add Item
+  </KdsButton>
+  
+  <KdsButton HasIcon="true" Icon="delete" Appearance="outlined">
+    Delete
+  </KdsButton>
+  
+  <KdsButton HasIcon="true" Icon="settings" Appearance="tonal">
+    Settings
+  </KdsButton>
+  
+  ─────────────────────────────────────────────────────────────────────────
+  
+  EXAMPLE 3: Custom icon slot (standard WC semantics via ChildContent)
+  ─────────────────────────────────────────────────────────────────────
+  <KdsButton Appearance="tonal">
+    <span slot="icon">🎨</span>
+    Design
+  </KdsButton>
+  
+  <KdsButton Appearance="filled">
+    <svg slot="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z..."/>
+    </svg>
+    Done
+  </KdsButton>
+  
+  ─────────────────────────────────────────────────────────────────────────
+  
+  EXAMPLE 4: Button states (5 state variants)
+  ────────────────────────────────────────────
+  <KdsButton State="enabled">
+    Enabled
+  </KdsButton>
+  
+  <KdsButton State="disabled">
+    Disabled
+  </KdsButton>
+  
+  <KdsButton State="hovered">
+    Hovered
+  </KdsButton>
+  
+  <KdsButton State="focused">
+    Focused
+  </KdsButton>
+  
+  <KdsButton State="pressed">
+    Pressed
+  </KdsButton>
+  
+  ─────────────────────────────────────────────────────────────────────────
+  
+  EXAMPLE 5: Form button types (button, submit, reset)
+  ─────────────────────────────────────────────────────
+  <KdsButton Type="button">
+    Regular Button
+  </KdsButton>
+  
+  <KdsButton Type="submit" Appearance="filled">
+    Submit
+  </KdsButton>
+  
+  <KdsButton Type="reset" Appearance="outlined">
+    Reset
+  </KdsButton>
+  
+  ─────────────────────────────────────────────────────────────────────────
+  
+  EXAMPLE 6: Link button via Href property
+  ──────────────────────────────────────────
+  <KdsButton Href="https://example.com" Appearance="filled">
+    Go to Example
+  </KdsButton>
+  
+  <KdsButton Href="/docs" Appearance="text">
+    Read Documentation
+  </KdsButton>
+  
+  <KdsButton
+      Href="/settings"
+      HasIcon="true"
+      Icon="settings"
+      Appearance="tonal">
+    Settings
+  </KdsButton>
+  
+  ─────────────────────────────────────────────────────────────────────────
+  
+  EXAMPLE 7: Event handling (kds-click event)
+  ────────────────────────────────────────────
+  <KdsButton OnKdsClick="HandleButtonClick" Appearance="filled">
+    Click Me
+  </KdsButton>
+  
+  @@code {
+      private void HandleButtonClick(CustomEventArgs e)
+      {
+          Console.WriteLine("Button clicked!");
+          Console.WriteLine("Event:", e);
+      }
+  }
+  
+  ─────────────────────────────────────────────────────────────────────────
+  
+  EXAMPLE 8: Dynamic properties with C# bindings
+  ───────────────────────────────────────────────
+  <KdsButton
+      Appearance="@buttonAppearance"
+      State="@(isDisabled ? \"disabled\" : \"enabled\")"
+      HasIcon="@showIcon"
+      Icon="@selectedIcon"
+      Label="@buttonLabel"
+      Type="@formButtonType"
+      Href="@navigateTo"
+      OnKdsClick="@HandleClick">
+    @buttonText
+  </KdsButton>
+  
+  ===========================================================================
+  API REFERENCE (STRICT PARITY)
+  ===========================================================================
+  
+  [Parameter] Properties (exactly 7, matching WC v1.0.0):
+  ──────────────────────────────────────────────────────
+  - Appearance:  "filled" | "outlined" | "text" | "tonal" | "elevated"
+  - State:       "enabled" | "disabled" | "hovered" | "focused" | "pressed"
+  - HasIcon:     bool
+  - Label:       string
+  - Icon:        string (Material Symbols icon name)
+  - Href:        string? (makes button render as <a> tag)
+  - Type:        "button" | "submit" | "reset"
+  
+  [Parameter] Event (exactly 1):
+  ──────────────────────────────
+  - OnKdsClick:  EventCallback<CustomEventArgs> (fires when button clicked)
+  
+  Projected Content Slots (standard WC semantics):
+  ────────────────────────────────────────────────
+  - default slot:  Button text content via @@ChildContent
+  - icon slot:     Custom icon via <span slot="icon">...</span> in @@ChildContent
+  
+  NO WRAPPER-ONLY PARAMETERS: This component has ZERO extra parameters.
+*@
+
 <kds-button
     appearance="@Appearance"
     state="@State"
@@ -8,47 +190,76 @@
     label="@Label"
     icon="@Icon"
     href="@Href"
-    @attributes="AdditionalAttributes"
-    @onclick="OnClick"
-    class="@Class">
+    type="@Type"
+    @onkds-click="OnKdsClickHandler">
     @ChildContent
 </kds-button>
 
 @code {
+    /// <summary>
+    /// Visual appearance variant (Material Design 3)
+    /// Default: "filled"
+    /// </summary>
     [Parameter]
     public string Appearance { get; set; } = "filled";
 
+    /// <summary>
+    /// Interaction state
+    /// Default: "enabled"
+    /// </summary>
     [Parameter]
     public string State { get; set; } = "enabled";
 
+    /// <summary>
+    /// Whether to show icon slot (maps to has-icon attribute)
+    /// Default: false
+    /// </summary>
     [Parameter]
     public bool HasIcon { get; set; } = false;
 
+    /// <summary>
+    /// Button text label
+    /// Default: ""
+    /// </summary>
     [Parameter]
     public string Label { get; set; } = "";
 
+    /// <summary>
+    /// Material Symbols icon name (e.g., "add", "delete")
+    /// Default: "add"
+    /// </summary>
     [Parameter]
     public string Icon { get; set; } = "add";
 
+    /// <summary>
+    /// Optional URL; when set, button renders as &lt;a&gt; tag (semantic link)
+    /// Default: null
+    /// </summary>
     [Parameter]
     public string? Href { get; set; }
 
+    /// <summary>
+    /// Form button type
+    /// Default: "button"
+    /// </summary>
+    [Parameter]
+    public string Type { get; set; } = "button";
+
+    /// <summary>
+    /// Projected content for default slot (button text) and icon slot
+    /// </summary>
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
+    /// <summary>
+    /// Callback when button is clicked
+    /// Receives CustomEventArgs with detail: { originalEvent: PointerEvent }
+    /// Event bubbles and is composed
+    /// </summary>
     [Parameter]
-    public EventCallback<MouseEventArgs> OnKdsClick { get; set; }
+    public EventCallback<CustomEventArgs> OnKdsClick { get; set; }
 
-    [Parameter(CaptureUnmatchedValues = true)]
-    public Dictionary<string, object>? AdditionalAttributes { get; set; }
-
-    [Parameter]
-    public string? Class { get; set; }
-
-    private async Task OnClick(MouseEventArgs e)
-    {
-        if (OnKdsClick.HasDelegate)
-        {
+    private async Task OnKdsClickHandler(CustomEventArgs e)
             await OnKdsClick.InvokeAsync(e);
         }
     }
