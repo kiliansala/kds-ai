@@ -19,6 +19,45 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2026-01-16
 
+### Added - Button Wrappers v1.0
+
+#### Framework Wrappers (Strict Parity Release)
+All framework wrappers released as stable v1.0.0 with **exact API parity** to Button Web Component v1.0.0.
+
+**Included:**
+- **React:** `src/wrappers/react/KdsButton.tsx` (commit: da4738b)
+  - 7 props: appearance, state, hasIcon, label, icon, href, type
+  - 1 event: onKdsClick (CustomEvent)
+  - 2 slots: default (children), icon (slot="icon")
+  
+- **Angular:** `src/wrappers/angular/kds-button.component.ts` (commit: d810fd9)
+  - 7 @Input: appearance, state, hasIcon, label, icon, href, type
+  - 1 @Output: kds-click (CustomEvent)
+  - 2 slots: ng-content projection for default + icon
+  
+- **Blazor:** `src/wrappers/blazor/KdsButton.razor` (commit: 6929809)
+  - 7 [Parameter]: Appearance, State, HasIcon, Label, Icon, Href, Type
+  - 1 [Parameter] event: OnKdsClick (CustomEventArgs)
+  - 2 slots: @ChildContent for default + icon
+
+#### Documentation
+- `WRAPPERS_RELEASE_NOTES.md` with comprehensive API reference
+- Usage examples for each framework
+- Attribute mapping reference
+- Slot support patterns
+- Event handling examples
+
+#### Parity Guarantee
+✅ **10/10 API elements verified per wrapper**
+- 7 properties (no aliases, no renamings)
+- 1 event (kds-click with CustomEvent payload)
+- 2 slots (default + icon via standard slot="icon")
+- 0 wrapper-only inputs/parameters
+
+---
+
+## [1.0.0] - 2026-01-16
+
 ### Added - Button Component v1.0
 
 #### Component
