@@ -725,8 +725,8 @@ const renderTokensW3CView = async (scopeLabel: string) => {
     const getCollectionDesc = (collName: string, scopeLabel: string) => {
         if (scopeLabel === 'Primitives' && collName === 'colors') {
             return `
+                <h2 id="w3c-coll-${collName}" style="background: #f8f9fa; padding: 0.75rem 1rem; border-radius: 6px; border-left: 5px solid #1484ff; margin: 0 0 1.5rem 0; font-size: 1.25em;">Colors</h2>
                 <div class="collection-description">
-                    <h4>Colors</h4>
                     <p>${t('primitives.colorsBase')}</p>
                     <p>${t('primitives.colorsRamps')}</p>
                     <p>${t('primitives.colorsModes')}</p>
@@ -734,8 +734,8 @@ const renderTokensW3CView = async (scopeLabel: string) => {
             `;
         } else if (scopeLabel === 'Primitives' && collName === 'space') {
             return `
+                <h2 id="w3c-coll-${collName}" style="background: #f8f9fa; padding: 0.75rem 1rem; border-radius: 6px; border-left: 5px solid #1484ff; margin: 0 0 1.5rem 0; font-size: 1.25em;">Space</h2>
                 <div class="collection-description">
-                    <h4>Space</h4>
                     <p>${t('primitives.spaceDesc')}</p>
                     <p>${t('primitives.spaceNaming')}</p>
                     <p>${t('primitives.spaceUsage')}</p>
@@ -743,8 +743,8 @@ const renderTokensW3CView = async (scopeLabel: string) => {
             `;
         } else if (scopeLabel === 'Semantic' && collName === 'key') {
             return `
+                <h2 id="w3c-coll-${collName}" style="background: #f8f9fa; padding: 0.75rem 1rem; border-radius: 6px; border-left: 5px solid #1484ff; margin: 0 0 1.5rem 0; font-size: 1.25em;">Key</h2>
                 <div class="collection-description">
-                    <h4>Key</h4>
                     <p>${t('semantic.keyDesc')}</p>
                     <p>${t('semantic.keyUsage')}</p>
                     <p>${t('semantic.keyDiff')}</p>
@@ -752,8 +752,8 @@ const renderTokensW3CView = async (scopeLabel: string) => {
             `;
         } else if (scopeLabel === 'Semantic' && collName === 'space') {
             return `
+                <h2 id="w3c-coll-${collName}" style="background: #f8f9fa; padding: 0.75rem 1rem; border-radius: 6px; border-left: 5px solid #1484ff; margin: 0 0 1.5rem 0; font-size: 1.25em;">Space</h2>
                 <div class="collection-description">
-                    <h4>Space</h4>
                     <p>${t('semantic.spaceDesc')}</p>
                     <p>${t('semantic.spaceUsage')}</p>
                 </div>
@@ -767,11 +767,14 @@ const renderTokensW3CView = async (scopeLabel: string) => {
         const groups = collectionMap[collName] || {};
         const groupOrder = [''].concat(Object.keys(groups).filter((g) => g && (groups[g]?.length || 0) > 0));
         
-        // Add collection description
+        // Add collection description (with title)
         const collDesc = getCollectionDesc(collName, scopeLabel);
-        if (collDesc) tablesHtml += collDesc;
-        
-        tablesHtml += `<h2 id="w3c-coll-${collName}" style="background: #f8f9fa; padding: 0.75rem 1rem; border-radius: 6px; border-left: 5px solid #1484ff; margin: 0 0 1.5rem 0; font-size: 1.25em;">${collName}</h2>`;
+        if (collDesc) {
+            tablesHtml += collDesc;
+        } else {
+            // If no description, just add title
+            tablesHtml += `<h2 id="w3c-coll-${collName}" style="background: #f8f9fa; padding: 0.75rem 1rem; border-radius: 6px; border-left: 5px solid #1484ff; margin: 0 0 1.5rem 0; font-size: 1.25em;">${collName}</h2>`;
+        }
         groupOrder.forEach((groupName) => {
             const rows = groups[groupName] || [];
             if (!rows.length) return;
@@ -1242,6 +1245,49 @@ const renderPlaygroundPreview = (component: any) => {
   if (blazorRaw) blazorRaw.textContent = blazorCode;
 };
 
+// --- Visual Matrix: Variants × States ---
+const renderVisualMatrix = (component: any) => {
+  // For Button: appearances and states
+  const appearanceProp = component.properties.find((p: any) => p.name === 'appearance');
+  const stateProp = component.properties.find((p: any) => p.name === 'state');
+  
+  if (!appearanceProp || !stateProp || component.tag !== 'kds-button') {
+    return ''; // Only render for Button
+  }
+
+  const appearances = appearanceProp.allowedValues || ['filled'];
+  const states = stateProp.allowedValues || ['enabled'];
+
+  const matrix = appearances
+    .map((appearance: string) => `
+      <div style="margin-bottom: 2rem;">
+        <h4 style="margin: 0 0 1rem; font-size: 0.95em; color: #333;"><code>${appearance}</code></h4>
+        <div style="display: grid; grid-template-columns: repeat(${states.length}, 1fr); gap: 1rem; margin-bottom: 2rem;">
+          ${states
+            .map((state: string) => {
+              const attrs = `appearance="${appearance}" state="${state}" label="Button" has-icon="true" icon="add"`;
+              return `
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
+                  <div style="margin-bottom: 0.5rem; font-size: 0.8em; color: #666; font-weight: 500;">${state}</div>
+                  <kds-button ${attrs}></kds-button>
+                </div>
+              `;
+            })
+            .join('')}
+        </div>
+      </div>
+    `)
+    .join('');
+
+  return `
+    <h2 style="margin-top: 3rem;">Visual Matrix: Variants × States</h2>
+    <p style="color: #666; margin-bottom: 1.5rem;">All appearance variants with all interaction states.</p>
+    <div style="background: white; border: 1px solid #eee; border-radius: 8px; padding: 2rem;">
+      ${matrix}
+    </div>
+  `;
+};
+
 const renderComponent = (tag: string) => {
   const component = data.components.find(c => c.tag === tag);
   if (!component) return `<main><h1>Component not found</h1></main>`;
@@ -1322,6 +1368,8 @@ const renderComponent = (tag: string) => {
       <h2 style="margin-top: 3rem;">Properties</h2>
       ${renderPropTable(component.properties)}
 
+      ${renderVisualMatrix(component)}
+
       ${component.events && component.events.length > 0 ? `
         <h2 style="margin-top: 3rem;">Events</h2>
         <table class="api-table">
@@ -1351,6 +1399,34 @@ const renderComponent = (tag: string) => {
             `).join('')}
           </tbody>
         </table>
+
+        <h3 style="margin-top: 2rem;">Slot Examples</h3>
+        ${component.tag === 'kds-button' ? `
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+            <div>
+              <h4 style="margin: 0 0 0.5rem; font-size: 0.9em; color: #666;">Default slot (label replacement)</h4>
+              <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; background: #fafafa; margin-bottom: 0.5rem;">
+                <kds-button appearance="filled">
+                  Custom Label via Slot
+                </kds-button>
+              </div>
+              <pre style="font-size: 0.8em;"><code>&lt;kds-button appearance="filled"&gt;
+  Custom Label via Slot
+&lt;/kds-button&gt;</code></pre>
+            </div>
+            <div>
+              <h4 style="margin: 0 0 0.5rem; font-size: 0.9em; color: #666;">Icon slot (custom icon)</h4>
+              <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; background: #fafafa; margin-bottom: 0.5rem;">
+                <kds-button appearance="filled" label="Download">
+                  <span slot="icon" style="font-size: 18px;">⬇️</span>
+                </kds-button>
+              </div>
+              <pre style="font-size: 0.8em;"><code>&lt;kds-button appearance="filled" label="Download"&gt;
+  &lt;span slot="icon"&gt;⬇️&lt;/span&gt;
+&lt;/kds-button&gt;</code></pre>
+            </div>
+          </div>
+        ` : ''}
       ` : ''}
     </main>
   `;
