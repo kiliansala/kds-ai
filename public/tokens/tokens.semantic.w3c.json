@@ -1,6 +1,26 @@
 {
   "semantic": {
     "space": {
+      "space-0": {
+        "$type": "number",
+        "$value": "{primitive.space.space-0}"
+      },
+      "space-8": {
+        "$type": "number",
+        "$value": "{primitive.space.space-8}"
+      },
+      "space-16": {
+        "$type": "number",
+        "$value": "{primitive.space.space-16}"
+      },
+      "space-24": {
+        "$type": "number",
+        "$value": "{primitive.space.space-24}"
+      },
+      "space-40": {
+        "$type": "number",
+        "$value": "{primitive.space.space-40}"
+      },
       "row": {
         "height": {
           "$type": "number",
@@ -94,26 +114,88 @@
           "$type": "number",
           "$value": "{primitive.space.space-8}"
         }
+      }
+    },
+    "status": {
+      "error": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.red.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.red.70}"
+        }
       },
-      "space-0": {
-        "$type": "number",
-        "$value": "{primitive.space.space-0}"
+      "warning": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.orange.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.orange.70}"
+        }
       },
-      "space-8": {
-        "$type": "number",
-        "$value": "{primitive.space.space-8}"
+      "success": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.green.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.green.70}"
+        }
       },
-      "space-16": {
-        "$type": "number",
-        "$value": "{primitive.space.space-16}"
+      "info": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.blue.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.blue.70}"
+        }
       },
-      "space-24": {
-        "$type": "number",
-        "$value": "{primitive.space.space-24}"
+      "critical": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.purple.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.purple.70}"
+        }
       },
-      "space-40": {
-        "$type": "number",
-        "$value": "{primitive.space.space-40}"
+      "unknown": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.teal.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.teal.70}"
+        }
+      },
+      "disabled": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.gray.50}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.ramps.gray.70}"
+        }
+      },
+      "on-status": {
+        "light": {
+          "$type": "color",
+          "$value": "{primitive.colors.base.black}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{primitive.colors.base.black}"
+        }
       }
     },
     "typography": {
@@ -324,13 +406,13 @@
           "$type": "number",
           "$value": "{primitive.typeface.weight.medium}"
         },
-        "size": {
-          "$type": "number",
-          "$value": "{primitive.typescale.label-large.size}"
-        },
         "weight-prominent": {
           "$type": "number",
           "$value": "{primitive.typeface.weight.bold}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": "{primitive.typescale.label-large.size}"
         },
         "line-height": {
           "$type": "number",
@@ -380,13 +462,13 @@
           "$type": "number",
           "$value": "{primitive.typescale.label-small.size}"
         },
-        "tracking": {
-          "$type": "number",
-          "$value": "{primitive.typescale.label-small.tracking}"
-        },
         "line-height": {
           "$type": "number",
           "$value": "{primitive.typescale.label-small.line-height}"
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": "{primitive.typescale.label-small.tracking}"
         }
       },
       "body-large": {
@@ -595,88 +677,6 @@
         "dark": {
           "$type": "color",
           "$value": "{primitive.colors.ramps.gray.70}"
-        }
-      }
-    },
-    "status": {
-      "error": {
-        "light": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.red.50}"
-        },
-        "dark": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.red.70}"
-        }
-      },
-      "warning": {
-        "light": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.orange.50}"
-        },
-        "dark": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.orange.70}"
-        }
-      },
-      "success": {
-        "light": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.green.50}"
-        },
-        "dark": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.green.70}"
-        }
-      },
-      "info": {
-        "light": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.blue.50}"
-        },
-        "dark": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.blue.70}"
-        }
-      },
-      "critical": {
-        "light": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.purple.50}"
-        },
-        "dark": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.purple.70}"
-        }
-      },
-      "unknown": {
-        "light": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.teal.50}"
-        },
-        "dark": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.teal.70}"
-        }
-      },
-      "disabled": {
-        "light": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.gray.50}"
-        },
-        "dark": {
-          "$type": "color",
-          "$value": "{primitive.colors.ramps.gray.70}"
-        }
-      },
-      "on-status": {
-        "light": {
-          "$type": "color",
-          "$value": "{primitive.colors.base.black}"
-        },
-        "dark": {
-          "$type": "color",
-          "$value": "{primitive.colors.base.black}"
         }
       }
     }

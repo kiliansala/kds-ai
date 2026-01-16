@@ -208,13 +208,13 @@
           "$type": "number",
           "$value": "{semantic.typeface.weight.medium}"
         },
-        "size": {
-          "$type": "number",
-          "$value": "{primitive.typescale.label-large.size}"
-        },
         "weight-prominent": {
           "$type": "number",
           "$value": "{semantic.typeface.weight.bold}"
+        },
+        "size": {
+          "$type": "number",
+          "$value": "{primitive.typescale.label-large.size}"
         },
         "line-height": {
           "$type": "number",
@@ -264,13 +264,13 @@
           "$type": "number",
           "$value": "{primitive.typescale.label-small.size}"
         },
-        "tracking": {
-          "$type": "number",
-          "$value": "{primitive.typescale.label-small.tracking}"
-        },
         "line-height": {
           "$type": "number",
           "$value": "{primitive.typescale.label-small.line-height}"
+        },
+        "tracking": {
+          "$type": "number",
+          "$value": "{primitive.typescale.label-small.tracking}"
         }
       },
       "body-large": {

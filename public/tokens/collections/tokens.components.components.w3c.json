@@ -4,7 +4,7 @@
       "primary": {
         "light": {
           "$type": "color",
-          "$value": "{primitive.colors.ramps.blue.53}"
+          "$value": "{primitive.colors.ramps.blue.54}"
         },
         "dark": {
           "$type": "color",

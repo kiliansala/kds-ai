@@ -32,68 +32,68 @@
           "VariableID:18067:46",
           "VariableID:18067:48",
           "VariableID:18067:45",
-          "VariableID:18067:99",
-          "VariableID:18067:86",
           "VariableID:18067:87",
           "VariableID:18067:43",
+          "VariableID:18067:86",
+          "VariableID:18067:99",
           "VariableID:18067:97",
           "VariableID:18067:94",
           "VariableID:18067:88",
           "VariableID:18067:91",
           "VariableID:18067:143",
-          "VariableID:18067:85",
-          "VariableID:18067:89",
-          "VariableID:18067:98",
-          "VariableID:18067:90",
           "VariableID:18067:137",
+          "VariableID:18067:98",
+          "VariableID:18067:85",
+          "VariableID:18067:90",
+          "VariableID:18067:89",
+          "VariableID:18067:95",
           "VariableID:18067:140",
           "VariableID:18067:147",
-          "VariableID:18067:95",
-          "VariableID:18067:148",
-          "VariableID:18067:96",
-          "VariableID:18067:135",
           "VariableID:18067:92",
+          "VariableID:18067:96",
           "VariableID:18067:144",
           "VariableID:18067:177",
+          "VariableID:18067:148",
+          "VariableID:18067:135",
           "VariableID:18067:179",
-          "VariableID:18067:93",
-          "VariableID:18067:174",
+          "VariableID:18067:138",
           "VariableID:18067:208",
+          "VariableID:18067:214",
           "VariableID:18067:173",
+          "VariableID:18067:175",
+          "VariableID:18067:93",
           "VariableID:18067:145",
           "VariableID:18067:171",
-          "VariableID:18067:175",
-          "VariableID:18067:138",
-          "VariableID:18067:214",
-          "VariableID:18067:207",
+          "VariableID:18067:174",
           "VariableID:18067:213",
+          "VariableID:18067:207",
           "VariableID:18067:206",
           "VariableID:18067:211",
           "VariableID:18067:210",
-          "VariableID:18067:246",
-          "VariableID:18067:240",
-          "VariableID:18067:178",
           "VariableID:18067:172",
-          "VariableID:18067:136",
           "VariableID:18067:205",
+          "VariableID:18067:246",
+          "VariableID:18067:136",
+          "VariableID:18067:178",
+          "VariableID:18067:240",
           "VariableID:18067:209",
-          "VariableID:18067:242",
           "VariableID:18067:245",
-          "VariableID:18067:239",
+          "VariableID:18067:242",
           "VariableID:18067:243",
-          "VariableID:18067:176",
+          "VariableID:18067:239",
           "VariableID:18067:212",
-          "VariableID:18067:204",
-          "VariableID:18067:238",
-          "VariableID:18067:170",
           "VariableID:18067:263",
+          "VariableID:18067:176",
+          "VariableID:18067:170",
+          "VariableID:18067:238",
           "VariableID:18067:241",
+          "VariableID:18067:204",
           "VariableID:18067:261",
           "VariableID:18067:260",
-          "VariableID:18067:259",
           "VariableID:18067:244",
           "VariableID:18067:237",
           "VariableID:18067:169",
+          "VariableID:18067:259",
           "VariableID:18067:262"
         ]
       },
@@ -1662,46 +1662,6 @@
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:99": {
-        "name": "Headline Large/Font",
-        "id": "VariableID:18067:99",
-        "remote": false,
-        "key": "fdddc0f1b35ebf58431962b6f4111b20ad6b5c18",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "STRING",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:18059:3"
-          }
-        },
-        "scopes": [
-          "FONT_FAMILY"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:86": {
-        "name": "Headline Medium/Font",
-        "id": "VariableID:18067:86",
-        "remote": false,
-        "key": "2609d46eba565c1f7dcae2ac0a7c20c1e674220d",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "STRING",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:18059:3"
-          }
-        },
-        "scopes": [
-          "FONT_FAMILY"
-        ],
-        "codeSyntax": {}
-      },
       "VariableID:18067:87": {
         "name": "Headline Small/Font",
         "id": "VariableID:18067:87",
@@ -1736,6 +1696,46 @@
         },
         "scopes": [
           "LETTER_SPACING"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:86": {
+        "name": "Headline Medium/Font",
+        "id": "VariableID:18067:86",
+        "remote": false,
+        "key": "2609d46eba565c1f7dcae2ac0a7c20c1e674220d",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "STRING",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:18059:3"
+          }
+        },
+        "scopes": [
+          "FONT_FAMILY"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:99": {
+        "name": "Headline Large/Font",
+        "id": "VariableID:18067:99",
+        "remote": false,
+        "key": "fdddc0f1b35ebf58431962b6f4111b20ad6b5c18",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "STRING",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:18059:3"
+          }
+        },
+        "scopes": [
+          "FONT_FAMILY"
         ],
         "codeSyntax": {}
       },
@@ -1833,28 +1833,11 @@
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:85": {
-        "name": "Headline Small/Line Height",
-        "id": "VariableID:18067:85",
+      "VariableID:18067:137": {
+        "name": "Title Medium/Font",
+        "id": "VariableID:18067:137",
         "remote": false,
-        "key": "fbbccb7630362f7edcf9c09b76080ac56f934fdb",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 32
-        },
-        "scopes": [
-          "LINE_HEIGHT"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:89": {
-        "name": "Headline Large/Weight",
-        "id": "VariableID:18067:89",
-        "remote": false,
-        "key": "5c891b827567cee383f1eb4b4bc81e9233e93eed",
+        "key": "c05b821c9cfe3703bcf50b18982a5894c1d2877e",
         "variableCollectionId": "VariableCollectionId:18064:4",
         "resolvedType": "STRING",
         "description": "",
@@ -1862,11 +1845,11 @@
         "valuesByMode": {
           "18064:1": {
             "type": "VARIABLE_ALIAS",
-            "id": "VariableID:18059:4"
+            "id": "VariableID:18059:7"
           }
         },
         "scopes": [
-          "FONT_STYLE"
+          "FONT_FAMILY"
         ],
         "codeSyntax": {}
       },
@@ -1881,6 +1864,23 @@
         "hiddenFromPublishing": false,
         "valuesByMode": {
           "18064:1": 36
+        },
+        "scopes": [
+          "LINE_HEIGHT"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:85": {
+        "name": "Headline Small/Line Height",
+        "id": "VariableID:18067:85",
+        "remote": false,
+        "key": "fbbccb7630362f7edcf9c09b76080ac56f934fdb",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 32
         },
         "scopes": [
           "LINE_HEIGHT"
@@ -1904,11 +1904,11 @@
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:137": {
-        "name": "Title Medium/Font",
-        "id": "VariableID:18067:137",
+      "VariableID:18067:89": {
+        "name": "Headline Large/Weight",
+        "id": "VariableID:18067:89",
         "remote": false,
-        "key": "c05b821c9cfe3703bcf50b18982a5894c1d2877e",
+        "key": "5c891b827567cee383f1eb4b4bc81e9233e93eed",
         "variableCollectionId": "VariableCollectionId:18064:4",
         "resolvedType": "STRING",
         "description": "",
@@ -1916,11 +1916,28 @@
         "valuesByMode": {
           "18064:1": {
             "type": "VARIABLE_ALIAS",
-            "id": "VariableID:18059:7"
+            "id": "VariableID:18059:4"
           }
         },
         "scopes": [
-          "FONT_FAMILY"
+          "FONT_STYLE"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:95": {
+        "name": "Headline Large/Size",
+        "id": "VariableID:18067:95",
+        "remote": false,
+        "key": "aac4a30f50c1d64abf669bc97a56acde154782d3",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 32
+        },
+        "scopes": [
+          "FONT_SIZE"
         ],
         "codeSyntax": {}
       },
@@ -1964,37 +1981,20 @@
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:95": {
-        "name": "Headline Large/Size",
-        "id": "VariableID:18067:95",
+      "VariableID:18067:92": {
+        "name": "Headline Small/Tracking",
+        "id": "VariableID:18067:92",
         "remote": false,
-        "key": "aac4a30f50c1d64abf669bc97a56acde154782d3",
+        "key": "54e231763c5fe697bdaa2016d296837c45fb19f6",
         "variableCollectionId": "VariableCollectionId:18064:4",
         "resolvedType": "FLOAT",
         "description": "",
         "hiddenFromPublishing": false,
         "valuesByMode": {
-          "18064:1": 32
+          "18064:1": 0
         },
         "scopes": [
-          "FONT_SIZE"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:148": {
-        "name": "Title Large/Size",
-        "id": "VariableID:18067:148",
-        "remote": false,
-        "key": "1b4ac55c3aaf4903489626a0dadd4daf8096705f",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 22
-        },
-        "scopes": [
-          "FONT_SIZE"
+          "LETTER_SPACING"
         ],
         "codeSyntax": {}
       },
@@ -2012,40 +2012,6 @@
         },
         "scopes": [
           "LINE_HEIGHT"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:135": {
-        "name": "Title Medium/Size",
-        "id": "VariableID:18067:135",
-        "remote": false,
-        "key": "61c0658e27e1ca341a5042f1a11c5b90182c370e",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 16
-        },
-        "scopes": [
-          "FONT_SIZE"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:92": {
-        "name": "Headline Small/Tracking",
-        "id": "VariableID:18067:92",
-        "remote": false,
-        "key": "54e231763c5fe697bdaa2016d296837c45fb19f6",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 0
-        },
-        "scopes": [
-          "LETTER_SPACING"
         ],
         "codeSyntax": {}
       },
@@ -2086,6 +2052,40 @@
         ],
         "codeSyntax": {}
       },
+      "VariableID:18067:148": {
+        "name": "Title Large/Size",
+        "id": "VariableID:18067:148",
+        "remote": false,
+        "key": "1b4ac55c3aaf4903489626a0dadd4daf8096705f",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 22
+        },
+        "scopes": [
+          "FONT_SIZE"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:135": {
+        "name": "Title Medium/Size",
+        "id": "VariableID:18067:135",
+        "remote": false,
+        "key": "61c0658e27e1ca341a5042f1a11c5b90182c370e",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 16
+        },
+        "scopes": [
+          "FONT_SIZE"
+        ],
+        "codeSyntax": {}
+      },
       "VariableID:18067:179": {
         "name": "Title Small/Weight",
         "id": "VariableID:18067:179",
@@ -2106,28 +2106,28 @@
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:93": {
-        "name": "Headline Large/Tracking",
-        "id": "VariableID:18067:93",
+      "VariableID:18067:138": {
+        "name": "Title Medium/Line Height",
+        "id": "VariableID:18067:138",
         "remote": false,
-        "key": "1e5400af4b089e612282c6a4ef00e67350171aa4",
+        "key": "9e5aa016d681970c8de4fdb3daa974392fd42c0e",
         "variableCollectionId": "VariableCollectionId:18064:4",
         "resolvedType": "FLOAT",
         "description": "",
         "hiddenFromPublishing": false,
         "valuesByMode": {
-          "18064:1": 0
+          "18064:1": 24
         },
         "scopes": [
-          "LETTER_SPACING"
+          "LINE_HEIGHT"
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:174": {
-        "name": "Label Large/Font",
-        "id": "VariableID:18067:174",
+      "VariableID:18067:208": {
+        "name": "Label Small/Font",
+        "id": "VariableID:18067:208",
         "remote": false,
-        "key": "32dbd81236a82419bbaee37ff64712db6e16e339",
+        "key": "31ac94eb28b76ba8125a16a6cd7744331fd12bb7",
         "variableCollectionId": "VariableCollectionId:18064:4",
         "resolvedType": "STRING",
         "description": "",
@@ -2143,11 +2143,11 @@
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:208": {
-        "name": "Label Small/Font",
-        "id": "VariableID:18067:208",
+      "VariableID:18067:214": {
+        "name": "Label Medium/Font",
+        "id": "VariableID:18067:214",
         "remote": false,
-        "key": "31ac94eb28b76ba8125a16a6cd7744331fd12bb7",
+        "key": "ee4c516f40f456c5beceeb791afb8aae7fd83600",
         "variableCollectionId": "VariableCollectionId:18064:4",
         "resolvedType": "STRING",
         "description": "",
@@ -2180,6 +2180,40 @@
         },
         "scopes": [
           "FONT_STYLE"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:175": {
+        "name": "Title Small/Size",
+        "id": "VariableID:18067:175",
+        "remote": false,
+        "key": "cf87a85a50dc6f227af0654c119a5857e0ed34f3",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 14
+        },
+        "scopes": [
+          "FONT_SIZE"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:93": {
+        "name": "Headline Large/Tracking",
+        "id": "VariableID:18067:93",
+        "remote": false,
+        "key": "1e5400af4b089e612282c6a4ef00e67350171aa4",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 0
+        },
+        "scopes": [
+          "LETTER_SPACING"
         ],
         "codeSyntax": {}
       },
@@ -2220,45 +2254,11 @@
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:175": {
-        "name": "Title Small/Size",
-        "id": "VariableID:18067:175",
+      "VariableID:18067:174": {
+        "name": "Label Large/Font",
+        "id": "VariableID:18067:174",
         "remote": false,
-        "key": "cf87a85a50dc6f227af0654c119a5857e0ed34f3",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 14
-        },
-        "scopes": [
-          "FONT_SIZE"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:138": {
-        "name": "Title Medium/Line Height",
-        "id": "VariableID:18067:138",
-        "remote": false,
-        "key": "9e5aa016d681970c8de4fdb3daa974392fd42c0e",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 24
-        },
-        "scopes": [
-          "LINE_HEIGHT"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:214": {
-        "name": "Label Medium/Font",
-        "id": "VariableID:18067:214",
-        "remote": false,
-        "key": "ee4c516f40f456c5beceeb791afb8aae7fd83600",
+        "key": "32dbd81236a82419bbaee37ff64712db6e16e339",
         "variableCollectionId": "VariableCollectionId:18064:4",
         "resolvedType": "STRING",
         "description": "",
@@ -2274,11 +2274,11 @@
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:207": {
-        "name": "Label Small/Weight",
-        "id": "VariableID:18067:207",
+      "VariableID:18067:213": {
+        "name": "Label Medium/Weight",
+        "id": "VariableID:18067:213",
         "remote": false,
-        "key": "5baa15d62303703103fbe2b12c856c4238be533b",
+        "key": "2c9ac0235d44b13ad3c07a3950ffc110bd8acfec",
         "variableCollectionId": "VariableCollectionId:18064:4",
         "resolvedType": "STRING",
         "description": "",
@@ -2294,11 +2294,11 @@
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:213": {
-        "name": "Label Medium/Weight",
-        "id": "VariableID:18067:213",
+      "VariableID:18067:207": {
+        "name": "Label Small/Weight",
+        "id": "VariableID:18067:207",
         "remote": false,
-        "key": "2c9ac0235d44b13ad3c07a3950ffc110bd8acfec",
+        "key": "5baa15d62303703103fbe2b12c856c4238be533b",
         "variableCollectionId": "VariableCollectionId:18064:4",
         "resolvedType": "STRING",
         "description": "",
@@ -2368,6 +2368,40 @@
         ],
         "codeSyntax": {}
       },
+      "VariableID:18067:172": {
+        "name": "Label Large/Size",
+        "id": "VariableID:18067:172",
+        "remote": false,
+        "key": "9d0f96540daef5021e1a59daeded35fe385c234b",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 14
+        },
+        "scopes": [
+          "FONT_SIZE"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:205": {
+        "name": "Label Small/Line Height",
+        "id": "VariableID:18067:205",
+        "remote": false,
+        "key": "b47ccbac485ddae019222aa57d95e66722a65f0b",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 16
+        },
+        "scopes": [
+          "LINE_HEIGHT"
+        ],
+        "codeSyntax": {}
+      },
       "VariableID:18067:246": {
         "name": "Body Large/Font",
         "id": "VariableID:18067:246",
@@ -2385,6 +2419,40 @@
         },
         "scopes": [
           "FONT_FAMILY"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:136": {
+        "name": "Title Medium/Tracking",
+        "id": "VariableID:18067:136",
+        "remote": false,
+        "key": "bdbe977b8c9c9f272f3df492e8c3cddba81df7f1",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 0.15000000596046448
+        },
+        "scopes": [
+          "LETTER_SPACING"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:178": {
+        "name": "Title Small/Line Height",
+        "id": "VariableID:18067:178",
+        "remote": false,
+        "key": "0c5c85b3c2c4c65b9b29518eac1871abe5a6d711",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 20
+        },
+        "scopes": [
+          "LINE_HEIGHT"
         ],
         "codeSyntax": {}
       },
@@ -2408,74 +2476,6 @@
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:178": {
-        "name": "Title Small/Line Height",
-        "id": "VariableID:18067:178",
-        "remote": false,
-        "key": "0c5c85b3c2c4c65b9b29518eac1871abe5a6d711",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 20
-        },
-        "scopes": [
-          "LINE_HEIGHT"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:172": {
-        "name": "Label Large/Size",
-        "id": "VariableID:18067:172",
-        "remote": false,
-        "key": "9d0f96540daef5021e1a59daeded35fe385c234b",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 14
-        },
-        "scopes": [
-          "FONT_SIZE"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:136": {
-        "name": "Title Medium/Tracking",
-        "id": "VariableID:18067:136",
-        "remote": false,
-        "key": "bdbe977b8c9c9f272f3df492e8c3cddba81df7f1",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 0.15000000596046448
-        },
-        "scopes": [
-          "LETTER_SPACING"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:205": {
-        "name": "Label Small/Line Height",
-        "id": "VariableID:18067:205",
-        "remote": false,
-        "key": "b47ccbac485ddae019222aa57d95e66722a65f0b",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 16
-        },
-        "scopes": [
-          "LINE_HEIGHT"
-        ],
-        "codeSyntax": {}
-      },
       "VariableID:18067:209": {
         "name": "Label Medium/Line Height",
         "id": "VariableID:18067:209",
@@ -2490,26 +2490,6 @@
         },
         "scopes": [
           "LINE_HEIGHT"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:242": {
-        "name": "Body Medium/Weight",
-        "id": "VariableID:18067:242",
-        "remote": false,
-        "key": "4ab23a9ea778dcb06c758291095a8eaf910c9e7e",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "STRING",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:18059:4"
-          }
-        },
-        "scopes": [
-          "FONT_STYLE"
         ],
         "codeSyntax": {}
       },
@@ -2533,20 +2513,23 @@
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:239": {
-        "name": "Body Medium/Size",
-        "id": "VariableID:18067:239",
+      "VariableID:18067:242": {
+        "name": "Body Medium/Weight",
+        "id": "VariableID:18067:242",
         "remote": false,
-        "key": "372e33ab09547aaa68d62e1292ed2dbeb380c41f",
+        "key": "4ab23a9ea778dcb06c758291095a8eaf910c9e7e",
         "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
+        "resolvedType": "STRING",
         "description": "",
         "hiddenFromPublishing": false,
         "valuesByMode": {
-          "18064:1": 14
+          "18064:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:18059:4"
+          }
         },
         "scopes": [
-          "FONT_SIZE"
+          "FONT_STYLE"
         ],
         "codeSyntax": {}
       },
@@ -2567,20 +2550,20 @@
         ],
         "codeSyntax": {}
       },
-      "VariableID:18067:176": {
-        "name": "Title Small/Tracking",
-        "id": "VariableID:18067:176",
+      "VariableID:18067:239": {
+        "name": "Body Medium/Size",
+        "id": "VariableID:18067:239",
         "remote": false,
-        "key": "113665f9baf30f8e97ee544ab0c37678d389527c",
+        "key": "372e33ab09547aaa68d62e1292ed2dbeb380c41f",
         "variableCollectionId": "VariableCollectionId:18064:4",
         "resolvedType": "FLOAT",
         "description": "",
         "hiddenFromPublishing": false,
         "valuesByMode": {
-          "18064:1": 0.10000000149011612
+          "18064:1": 14
         },
         "scopes": [
-          "LETTER_SPACING"
+          "FONT_SIZE"
         ],
         "codeSyntax": {}
       },
@@ -2598,57 +2581,6 @@
         },
         "scopes": [
           "LETTER_SPACING"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:204": {
-        "name": "Label Small/Tracking",
-        "id": "VariableID:18067:204",
-        "remote": false,
-        "key": "c92bd713fb25948a0d61a44bc6bd86b42f1bda8a",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 0.5
-        },
-        "scopes": [
-          "LETTER_SPACING"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:238": {
-        "name": "Body Medium/Line Height",
-        "id": "VariableID:18067:238",
-        "remote": false,
-        "key": "a5ab353b4fe5f4d0e65a94c7889cd346e4306a76",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 20
-        },
-        "scopes": [
-          "LINE_HEIGHT"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:170": {
-        "name": "Label Large/Line Height",
-        "id": "VariableID:18067:170",
-        "remote": false,
-        "key": "b03ae25bf89bb77b2bd148dc73a856f3685fc341",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 20
-        },
-        "scopes": [
-          "LINE_HEIGHT"
         ],
         "codeSyntax": {}
       },
@@ -2672,6 +2604,57 @@
         ],
         "codeSyntax": {}
       },
+      "VariableID:18067:176": {
+        "name": "Title Small/Tracking",
+        "id": "VariableID:18067:176",
+        "remote": false,
+        "key": "113665f9baf30f8e97ee544ab0c37678d389527c",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 0.10000000149011612
+        },
+        "scopes": [
+          "LETTER_SPACING"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:170": {
+        "name": "Label Large/Line Height",
+        "id": "VariableID:18067:170",
+        "remote": false,
+        "key": "b03ae25bf89bb77b2bd148dc73a856f3685fc341",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 20
+        },
+        "scopes": [
+          "LINE_HEIGHT"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:238": {
+        "name": "Body Medium/Line Height",
+        "id": "VariableID:18067:238",
+        "remote": false,
+        "key": "a5ab353b4fe5f4d0e65a94c7889cd346e4306a76",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 20
+        },
+        "scopes": [
+          "LINE_HEIGHT"
+        ],
+        "codeSyntax": {}
+      },
       "VariableID:18067:241": {
         "name": "Body Large/Line Height",
         "id": "VariableID:18067:241",
@@ -2686,6 +2669,23 @@
         },
         "scopes": [
           "LINE_HEIGHT"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:204": {
+        "name": "Label Small/Tracking",
+        "id": "VariableID:18067:204",
+        "remote": false,
+        "key": "c92bd713fb25948a0d61a44bc6bd86b42f1bda8a",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 0.5
+        },
+        "scopes": [
+          "LETTER_SPACING"
         ],
         "codeSyntax": {}
       },
@@ -2723,23 +2723,6 @@
         },
         "scopes": [
           "FONT_SIZE"
-        ],
-        "codeSyntax": {}
-      },
-      "VariableID:18067:259": {
-        "name": "Body Small/Line Height",
-        "id": "VariableID:18067:259",
-        "remote": false,
-        "key": "fabb1460cadc6aa799e6b6fc4f99148aab8c2d61",
-        "variableCollectionId": "VariableCollectionId:18064:4",
-        "resolvedType": "FLOAT",
-        "description": "",
-        "hiddenFromPublishing": false,
-        "valuesByMode": {
-          "18064:1": 16
-        },
-        "scopes": [
-          "LINE_HEIGHT"
         ],
         "codeSyntax": {}
       },
@@ -2791,6 +2774,23 @@
         },
         "scopes": [
           "LETTER_SPACING"
+        ],
+        "codeSyntax": {}
+      },
+      "VariableID:18067:259": {
+        "name": "Body Small/Line Height",
+        "id": "VariableID:18067:259",
+        "remote": false,
+        "key": "fabb1460cadc6aa799e6b6fc4f99148aab8c2d61",
+        "variableCollectionId": "VariableCollectionId:18064:4",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "valuesByMode": {
+          "18064:1": 16
+        },
+        "scopes": [
+          "LINE_HEIGHT"
         ],
         "codeSyntax": {}
       },

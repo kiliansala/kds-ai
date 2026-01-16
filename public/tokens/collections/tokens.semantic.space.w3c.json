@@ -1,6 +1,26 @@
 {
   "semantic": {
     "space": {
+      "space-0": {
+        "$type": "number",
+        "$value": "{primitive.space.space-0}"
+      },
+      "space-8": {
+        "$type": "number",
+        "$value": "{primitive.space.space-8}"
+      },
+      "space-16": {
+        "$type": "number",
+        "$value": "{primitive.space.space-16}"
+      },
+      "space-24": {
+        "$type": "number",
+        "$value": "{primitive.space.space-24}"
+      },
+      "space-40": {
+        "$type": "number",
+        "$value": "{primitive.space.space-40}"
+      },
       "row": {
         "height": {
           "$type": "number",
@@ -94,26 +114,6 @@
           "$type": "number",
           "$value": "{primitive.space.space-8}"
         }
-      },
-      "space-0": {
-        "$type": "number",
-        "$value": "{primitive.space.space-0}"
-      },
-      "space-8": {
-        "$type": "number",
-        "$value": "{primitive.space.space-8}"
-      },
-      "space-16": {
-        "$type": "number",
-        "$value": "{primitive.space.space-16}"
-      },
-      "space-24": {
-        "$type": "number",
-        "$value": "{primitive.space.space-24}"
-      },
-      "space-40": {
-        "$type": "number",
-        "$value": "{primitive.space.space-40}"
       }
     }
   }
