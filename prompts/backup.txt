@@ -1,5 +1,0 @@
-Backup y snapshot kds-ai 2026-01-14
-- Preparar snapshot Git en ~/AI/kds-ai: revisar estado, crear rama snapshot-2026-01-14, commitear todo con mensaje de snapshot y (opcional) tag.
-- Copiar contexto de Cursor (chats/terminales) desde ~/.cursor/projects/Users-kiliansala-AI-kds-ai/ hacia ~/backups/cursor-snapshots/kds-ai-2026-01-14/ usando rsync -a (sin cerrar Cursor para copiar; notar que para restaurar será mejor cerrar Cursor).
-- Copiar carpeta de trabajo completa ~/AI/kds-ai a ~/backups/workspace-snapshots/kds-ai-2026-01-14/ usando rsync -a para tener un clon completo de archivos.
-(Al restaurar) Cerrar Cursor, reemplazar carpeta de contexto con el backup, y cambiar repo a commit/tag snapshot; reinstalar deps si hace falta.

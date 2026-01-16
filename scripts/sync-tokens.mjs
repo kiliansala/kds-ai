@@ -1,5 +1,8 @@
 import fs from 'fs';
 import https from 'https';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const TOKEN = process.env.FIGMA_TOKEN;
 const OUTPUT_DIR = 'figma';

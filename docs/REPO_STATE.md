@@ -182,3 +182,15 @@ Before making changes, AI agents must:
 2. Respect all Active Decisions
 3. Avoid introducing tooling or workflows marked as out of scope
 4. Limit changes to the explicitly requested area
+
+## Token Pipeline Policy
+
+Token changes are considered complete only after the full lifecycle succeeds:
+
+1. npm run tokens:sync
+2. npm run tokens:transform
+3. npm run tokens:publish
+4. npm run tokens:css      (required for dev-app visualization)
+5. npm run tokens:build    (required for human documentation)
+
+No step may be skipped unless explicitly stated for a specific purpose.
