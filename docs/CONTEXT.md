@@ -4,20 +4,22 @@ This document defines the **stable, non-negotiable context** of the KDS-AI proje
 It acts as a **persistent system prompt** for AI tools and contributors.
 
 This file intentionally changes **rarely**.
-For current status and temporary decisions, always refer to `docs/REPO_STATE.md`.
+For current status, temporary decisions, and active focus, always refer to
+`docs/REPO_STATE.md`.
 
 ---
 
 ## 1. Purpose
 
-KDS-AI exists to define and validate a **design-system architecture** where:
+KDS-AI exists to define and validate a **design system architecture** where:
 
-- Figma is the **visual source of truth**
+- Figma is the **visual and conceptual source of truth**
 - Design tokens are **machine-readable, vendor-neutral, and W3C-aligned**
-- UI components are generated and validated **against tokens**
-- The system is consumable by **multiple frameworks** from a single canonical source
+- UI components are implemented **from tokens**, not from ad-hoc styles
+- A single canonical implementation can be consumed by **multiple frameworks**
 
-The goal is **consistency, traceability, and automation**, not manual UI craftsmanship.
+The objective is **consistency, traceability, and automation**,
+not manual UI craftsmanship.
 
 ---
 
@@ -26,41 +28,68 @@ The goal is **consistency, traceability, and automation**, not manual UI craftsm
 The following principles MUST be respected at all times:
 
 1. **Single Source of Truth (SSOT)**
-   - Visual truth lives in Figma
+   - Design intent lives in Figma
    - Semantic meaning lives in tokens
    - Components reflect tokens, never redefine them
 
 2. **Token-First System**
-   - Styling decisions are expressed as tokens
-   - Components consume tokens; they do not invent values
+   - All visual and semantic decisions must be expressed as tokens
+   - Components consume tokens; they must not invent values
 
-3. **Deterministic Outputs**
-   - Given the same token input, outputs must be reproducible
-   - No hidden logic or implicit styling
+3. **Deterministic and Auditable Outputs**
+   - Given the same input snapshots, outputs must be reproducible
+   - No implicit state or hidden transformations are allowed
 
 4. **Automation Over Manual Work**
-   - Repeated manual steps indicate missing scripts or rules
+   - Repeated manual steps indicate missing scripts or missing rules
+   - Scripts and pipelines are preferred over handcrafted artifacts
 
 ---
 
 ## 3. Source of Truth
 
 ### Figma
-- Figma variables are the authoritative source for:
-  - primitives
-  - semantic tokens
-  - component-level tokens
-- Code must adapt to Figma, not the other way around
+- Figma is the **visual and conceptual source of truth**
+- It defines:
+  - design intent
+  - component properties, variants, and states
+  - design tokens (primitives, semantic, and component-level)
 
 ### Tokens
-- Tokens are exported from Figma and transformed into:
-  - W3C Token Format
-  - consumable CSS / JSON artifacts
-- Tokens are the **only allowed bridge** between design and code
+- Tokens are the **technical source of truth** for styling and semantics
+- All design decisions consumed by code MUST be expressed as tokens
+- Tokens are versioned, machine-readable artifacts derived from Figma data
 
 ---
 
-## 4. Canonical Architecture
+## 4. Figma Integration (MCP)
+
+Data extraction from Figma (both variables and component definitions)
+may be performed via **MCP Figma Server** or equivalent mechanisms.
+
+MCP is considered a **synchronization and extraction layer**, not a source of truth.
+
+### Rules
+
+- MCP MAY be used to import:
+  - Figma variables (primitives, semantic, component tokens)
+  - component definitions (e.g. Button properties, variants, states)
+
+- All data imported from Figma MUST be:
+  - materialized as versioned JSON snapshots in the repository
+  - reviewed and committed explicitly
+
+- MCP MUST NOT:
+  - introduce implicit or hidden state
+  - bypass versioned snapshots
+  - generate or modify runtime behavior directly
+
+All downstream processing (token transformation, component implementation,
+documentation, and validation) operates exclusively on committed snapshot data.
+
+---
+
+## 5. Canonical Architecture
 
 ### Canonical Component Layer
 - **Web Components are the canonical implementation**
@@ -75,55 +104,57 @@ The following principles MUST be respected at all times:
 
 ---
 
-## 5. Token Strategy
+## 6. Token Strategy
 
 - Tokens are organized into:
   - primitives
   - semantic tokens
-  - component tokens
+  - component-level tokens
+
 - Tokens follow the **W3C Design Tokens Community Group format**
 - Token transformations are explicit and scripted
 - Generated artifacts are treated as **build outputs**, not handcrafted files
 
-No hardcoded colors, spacing, typography, or states are allowed in components
-unless explicitly defined as tokens.
+No hardcoded colors, spacing, typography, or state styling are allowed in
+components unless explicitly defined as tokens.
 
 ---
 
-## 6. Component Strategy
+## 7. Component Strategy
 
 - Components are:
   - token-driven
-  - stateless where possible
   - predictable in API surface
+  - stateless where possible
+
 - Component APIs must map cleanly to:
   - design properties in Figma
   - documented token usage
 
-The Button component is the **first canonical component** and sets the pattern
-for all future components.
+The Button component is the **first canonical component** and establishes the
+baseline pattern for all future components.
 
 ---
 
-## 7. Tooling Rules
+## 8. Tooling Rules
 
 - Tooling must support:
-  - token generation
+  - token generation and transformation
   - component validation
-  - multi-framework outputs
+  - multi-framework consumption
 
 - **Storybook is not a foundational dependency**
-  - Documentation and validation can be achieved through other means
-  - Inclusion of Storybook is a deliberate, explicit decision (see REPO_STATE)
+  - Documentation and validation may be achieved through alternative means
+  - Inclusion of Storybook is an explicit, deliberate decision
 
-- Scripts are preferred over manual processes
-- Local dev tooling must not redefine system rules
+- Scripts are preferred over manual workflows
+- Local development tooling must not redefine system rules
 
 ---
 
-## 8. AI Operating Rules
+## 9. AI Operating Rules
 
-AI tools (Claude Haiku, CODEX, etc.) MUST:
+AI tools (Claude Haiku, CODEX, and similar) MUST:
 
 1. Read **both**:
    - `docs/CONTEXT.md`
@@ -133,24 +164,22 @@ AI tools (Claude Haiku, CODEX, etc.) MUST:
    - new tooling
    - new architectural layers
    - alternative token strategies
-4. Limit changes strictly to what is requested
+4. Limit changes strictly to what is explicitly requested
 5. Prefer small, incremental changes over large rewrites
 
-AI tools must **execute**, not reinterpret the system.
+AI tools must **execute and comply**, not reinterpret the system.
 
 ---
 
-## 9. Explicitly Out of Scope
+## 10. Explicitly Out of Scope
 
 Unless explicitly stated otherwise:
 
 - Redesigning Figma structures
-- Introducing alternative token models
+- Introducing alternative token models or naming schemes
 - Framework-specific styling logic
 - Opinionated UI behavior beyond design definitions
 - Reintroducing deprecated or paused tooling
 
-Anything not explicitly allowed by this document or by `REPO_STATE.md`
+Anything not explicitly allowed by this document or by `docs/REPO_STATE.md`
 should be considered **out of scope**.
-
----
